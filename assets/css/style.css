@@ -131,7 +131,7 @@ nav ul li a.active {
 /* ── HERO HEADLINE ── */
 .hero-headline {
   background: var(--white);
-  padding: 60px 24px 56px;
+  padding: 36px 24px 28px;
   border-bottom: 1px solid var(--mid-gray);
   position: relative;
   display: flex;
@@ -179,7 +179,7 @@ nav ul li a.active {
 /* ── HERO TRIPTYCH ── */
 .hero-triptych {
   display: flex;
-  min-height: 440px;
+  min-height: 560px;
   overflow: hidden;
 }
 .hero-panel {
