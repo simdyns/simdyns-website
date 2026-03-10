@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_playwright_playwright__browser_navigate",
+      "mcp__plugin_playwright_playwright__browser_take_screenshot",
+      "Bash(curl:*)",
+      "Bash(node:*)",
+      "Bash(node --version 2>&1; npx --version 2>&1)",
+      "Bash(mkdir -p \"D:/SimDyns_Backup/SimDyns_Redesign/assets/images\"\ncp \"d:/Islam - SimDyns Technology Solutions/SimDyns/SimDyns Logos/SimDyns_Logo_rev02.png\" \"D:/SimDyns_Backup/SimDyns_Redesign/assets/images/logo.png\"\ncp \"d:/Islam - SimDyns Technology Solutions/SimDyns/SimDyns Logos/Islam Elbahnasy.jpg\" \"D:/SimDyns_Backup/SimDyns_Redesign/assets/images/team-islam.jpg\"\ncp \"d:/Islam - SimDyns Technology Solutions/SimDyns/SimDyns Logos/Ibrahim Goda.png\" \"D:/SimDyns_Backup/SimDyns_Redesign/assets/images/team-ibrahim.png\"\ncp \"d:/Islam - SimDyns Technology Solutions/SimDyns/SimDyns Logos/Mariam Elkholy.png\" \"D:/SimDyns_Backup/SimDyns_Redesign/assets/images/team-mariam.png\"\necho \"done\")",
+      "mcp__plugin_playwright_playwright__browser_evaluate",
+      "Bash(cd \"D:/SimDyns_Backup/SimDyns_Redesign/assets/images\" && \\\\\nBASE=\"https://simdyns.com/wp-content/uploads\" && \\\\\ncurl -sLo service-product-design.jpg \"$BASE/2024/10/schematic-drawing-of-Product-Design-and-Development.jpg\" && \\\\\ncurl -sLo service-cae.jpg \"$BASE/2024/10/Computer-Aided-Engineering-schematic-drawing.jpg\" && \\\\\ncurl -sLo service-software.jpg \"$BASE/2024/10/simplified-schematic-drawing-for-Software-Development-and-Testing.jpg\" && \\\\\ncurl -sLo service-control.jpg \"$BASE/2024/10/Control-System-Development-schematic-drawing.jpg\" && \\\\\ncurl -sLo service-innovation.jpg \"$BASE/2024/10/Driving-Innovation-Management-schematic-drawing.jpg\" && \\\\\ncurl -sLo service-production.jpg \"$BASE/2024/10/schematic-drawing-for-production-line-optimization.jpg\" && \\\\\ncurl -sLo partner-eit.jpg \"$BASE/2025/03/EIT-Deep-Tech.jpg\" && \\\\\ncurl -sLo partner-seebridge.jpg \"$BASE/2025/03/SeeBridge.jpg\" && \\\\\ncurl -sLo partner-immib.jpg \"$BASE/2025/03/IMMIB.jpg\" && \\\\\ncurl -sLo partner-turbine.jpeg \"$BASE/2018/02/Turbine-Efficiency-200x52.jpeg\" && \\\\\ncurl -sLo partner-inkonova.png \"$BASE/2018/02/inkonova-200x200.png\" && \\\\\ncurl -sLo partner-asfour.png \"$BASE/2018/02/asfour-200x200.png\" && \\\\\ncurl -sLo partner-electrolux.jpg \"$BASE/2018/02/electrolux-logo-200x161.jpg\" && \\\\\necho \"All done\" && ls -la)",
+      "Bash(cd \"D:/SimDyns_Backup/SimDyns_Redesign/assets/images\" && \\\\\nBASE=\"https://simdyns.com/wp-content/uploads\" && \\\\\ncurl -sLo hero-bg1.jpg \"$BASE/2016/11/sim9-e1730542039377.jpg\" && echo \"hero1 ok\" && \\\\\ncurl -sLo hero-bg2.jpg \"$BASE/2016/11/sim.jpg\" && echo \"hero2 ok\" && \\\\\ncurl -sLo testimonial-bg.jpg \"$BASE/2016/11/testimonial_background.jpg\" && echo \"testimonial ok\" && \\\\\ncurl -sLo cta-bg.jpg \"$BASE/2016/11/CTA_background.jpg\" && echo \"cta ok\" && \\\\\ncurl -sLo news-eu-grant.png \"$BASE/2018/03/49302a29-a9ef-4720-8a04-af81d42b22ca.png\" && echo \"news1 ok\" && \\\\\ncurl -sLo news-cybersecurity.png \"$BASE/2018/03/26d9b5c6-e1d9-4e04-99b3-73ff57e94014.png\" && echo \"news2 ok\" && \\\\\ncurl -sLo news-cubesat.png \"$BASE/2018/03/6648d44d-cd06-4c31-94d4-34556b8e0264.png\" && echo \"news3 ok\")",
+      "mcp__plugin_playwright_playwright__browser_install",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(git config:*)",
+      "Bash(vercel whoami:*)",
+      "Bash(vercel projects:*)"
+    ]
+  }
+}
