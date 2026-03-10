@@ -131,8 +131,8 @@ nav ul li a.active {
 /* ── HERO HEADLINE ── */
 .hero-headline {
   background: var(--white);
-  padding: 36px 24px 28px;
-  border-bottom: 1px solid var(--mid-gray);
+  padding: 36px 24px 12px;
+  border-bottom: none;
   position: relative;
   display: flex;
   justify-content: center;
