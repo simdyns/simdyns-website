@@ -158,13 +158,14 @@ nav ul li a.active {
   text-align: center;
 }
 .hero-headline-title {
-  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-size: clamp(1.1rem, 4.5vw, 3.6rem);
   font-weight: 800;
   color: var(--navy);
   line-height: 1.15;
   margin: 0 0 16px 0;
   letter-spacing: -0.5px;
   text-align: center;
+  white-space: nowrap;
 }
 .hero-headline-sub {
   font-size: clamp(1rem, 1.8vw, 1.25rem);
