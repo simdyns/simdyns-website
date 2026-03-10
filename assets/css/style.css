@@ -838,8 +838,24 @@ footer {
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero-triptych { flex-direction: column; }
-  .hero-panel { flex: none !important; min-height: 300px; transition: none; }
+  .hero-panel {
+    flex: none !important;
+    min-height: 0;
+    height: auto;
+    transition: none;
+  }
   .hero-panel:not(:last-child) { border-right: none; border-bottom: 2px solid rgba(255,255,255,0.18); }
+  .panel-content {
+    position: relative;
+    inset: auto;
+    padding: 52px 28px 48px;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .panel-overlay {
+    position: absolute;
+    inset: 0;
+  }
   .why-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
   .service-card { grid-template-columns: 1fr; }
   .service-card.reverse { direction: ltr; }
@@ -873,9 +889,10 @@ footer {
 #menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 600px) {
-  .hero-panel { min-height: 260px; }
-  .panel-content { padding: 28px 22px; }
-  .panel-content h2 { font-size: 1.4rem; }
+  .panel-content { padding: 40px 20px 36px; }
+  .panel-content h2 { font-size: 1.35rem; }
+  .panel-btns { flex-direction: row; flex-wrap: wrap; max-width: 100%; }
+  .panel-btn { flex: 1; min-width: 130px; text-align: center; }
   .solutions-grid, .news-grid, .team-grid { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr; }
   .core-competences ul { grid-template-columns: 1fr; }
