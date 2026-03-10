@@ -179,7 +179,7 @@ nav ul li a.active {
 /* ── HERO TRIPTYCH ── */
 .hero-triptych {
   display: flex;
-  min-height: 680px;
+  min-height: 440px;
   overflow: hidden;
 }
 .hero-panel {
