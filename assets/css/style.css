@@ -879,19 +879,20 @@ footer {
   transform: translateY(-3px);
 }
 .case-logo-panel {
-  height: 160px;
+  height: 180px;
   background: #fafafa;
   border-bottom: 1px solid var(--mid-gray);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 20px 24px;
+  gap: 24px;
+  padding: 24px 28px;
   flex-wrap: wrap;
+  flex-shrink: 0;
 }
 .case-logo-panel img {
-  max-height: 72px;
-  max-width: 130px;
+  max-height: 80px;
+  max-width: 140px;
   width: auto;
   height: auto;
   object-fit: contain;
@@ -909,20 +910,6 @@ footer {
   height: 100%;
   object-fit: cover;
   filter: none !important;
-}
-.case-logo-panel--neutral {
-  background: var(--light-gray);
-  flex-direction: column;
-  gap: 8px;
-}
-.case-logo-panel--neutral svg { color: var(--teal); opacity: .4; }
-.case-logo-panel--neutral span {
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--text-light);
-  text-align: center;
-  line-height: 1.4;
-  max-width: 160px;
 }
 .case-body {
   padding: 22px 24px;
