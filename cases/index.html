@@ -37,228 +37,274 @@
   </div>
 </div>
 
-<!-- FILTER TABS -->
-<section style="background:var(--white); padding:36px 24px 0;">
-  <div class="container">
-    <div class="case-filters" id="caseFilters">
-      <button class="case-filter active" data-filter="all">All Cases</button>
-      <button class="case-filter" data-filter="energy">Energy Management</button>
-      <button class="case-filter" data-filter="engineering">Engineering</button>
-      <button class="case-filter" data-filter="training">Deep Tech Training</button>
-      <button class="case-filter" data-filter="tooling">Tooling</button>
-    </div>
-  </div>
-</section>
+<!-- CASES LAYOUT -->
+<section class="cases-section">
+  <div class="cases-master-detail">
 
-<!-- CASES LIST -->
-<section style="background:var(--white);">
-  <div class="container">
-    <div class="cases-list" id="casesGrid">
+    <!-- LEFT SIDEBAR -->
+    <div class="cases-sidebar">
+      <div class="cases-sidebar-inner">
 
-      <!-- Case 1: Energy Management -->
-      <div class="case-row" data-category="energy">
-        <div class="case-row-logo">
-          <img src="../assets/images/partner-seebridge.jpg" alt="SeeBridge">
-          <div class="case-row-logo-sub">
-            <img src="../assets/images/partner-immib.jpg" alt="IMMIB">
-          </div>
+        <div class="cases-sidebar-group">
+          <span class="cases-group-label">Energy Management</span>
+          <button class="cases-sidebar-item active" data-case="case1">
+            Energy Management Solution Development
+          </button>
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+
+        <div class="cases-sidebar-group">
+          <span class="cases-group-label">Deep Tech Training</span>
+          <button class="cases-sidebar-item" data-case="case2">
+            CubeSat &amp; Computer Vision Applications
+          </button>
+          <button class="cases-sidebar-item" data-case="case3">
+            AI-Powered Cybersecurity Training
+          </button>
+        </div>
+
+        <div class="cases-sidebar-group">
+          <span class="cases-group-label">Engineering &amp; Product Development</span>
+          <button class="cases-sidebar-item" data-case="case5">
+            Drive Train Torsional Analysis
+          </button>
+          <button class="cases-sidebar-item" data-case="case6">
+            Drone-Systems Aeronautical Consultancy
+          </button>
+          <button class="cases-sidebar-item" data-case="case7">
+            Production Cell Automation (Gantry)
+          </button>
+          <button class="cases-sidebar-item" data-case="case9">
+            Nozzle Redesign for Dust Control Equipment
+          </button>
+        </div>
+
+        <div class="cases-sidebar-group">
+          <span class="cases-group-label">Tooling Development</span>
+          <button class="cases-sidebar-item" data-case="case4">
+            Gripper Modification — Press Automation
+          </button>
+          <button class="cases-sidebar-item" data-case="case8">
+            Tooling for Precise Manufacturing
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- RIGHT DETAIL PANEL -->
+    <div class="cases-detail" id="casesDetail">
+
+      <!-- CASE 1 -->
+      <div class="case-detail-panel active" id="case1">
+        <div class="case-detail-logo">
+          <img src="../assets/images/partner-seebridge.jpg" alt="SeeBridge">
+          <img src="../assets/images/partner-immib.jpg" alt="IMMIB">
+        </div>
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Energy Management</span>
             <span class="case-year">2024–2025</span>
           </div>
-          <h3>Energy Management Solution Development</h3>
+          <h2>Energy Management Solution Development</h2>
           <p class="case-client">SeeBridge EU Funded Program &amp; IMMIB — EU / Turkey</p>
           <p>Design and implementation of an advanced energy management system for plant and utility-scale industrial operations, implementing ISO 50001 standards. Awarded under the EU SeeBridge grant, focusing on energy efficiency through advanced simulation and process optimisation.</p>
-          <ul class="case-row-activities">
-            <li>Advanced simulation platform modelling energy usage and forecasting emissions</li>
-            <li>Process optimisation to reduce energy waste and improve operational efficiency</li>
-            <li>Strategic partnerships for collaborative sustainability innovation</li>
+          <h4>Key Activities</h4>
+          <ul>
+            <li>Advanced simulation platform modelling energy usage and forecasting carbon emissions</li>
+            <li>Targeted process improvements to reduce energy waste and minimise carbon output</li>
+            <li>One-on-one expert mentoring guiding businesses through digital and green transitions</li>
+            <li>Strategic partnerships fostering collaborative sustainability innovation</li>
             <li>Capacity building through professional training in energy management</li>
           </ul>
         </div>
       </div>
 
-      <!-- Case 2: CubeSat Training -->
-      <div class="case-row" data-category="training">
-        <div class="case-row-logo case-row-logo--photo">
+      <!-- CASE 2 -->
+      <div class="case-detail-panel" id="case2">
+        <div class="case-detail-logo case-detail-logo--photo">
           <img src="../assets/images/news-cubesat.png" alt="CubeSat Training">
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Deep Tech Training</span>
             <span class="case-year">2025</span>
           </div>
-          <h3>CubeSat and Computer Vision Applications</h3>
+          <h2>CubeSat and Computer Vision Applications</h2>
           <p class="case-client">Creativa Egypt — Egypt</p>
-          <p>Training programme integrating computer vision techniques in CubeSat missions for space-based imaging, object detection, and data analysis. Participants deploy AI-driven vision systems for Earth observation and autonomous satellite operations.</p>
-          <ul class="case-row-activities">
-            <li>EQF Level 3-aligned curriculum for AI-driven computer vision in CubeSat missions</li>
-            <li>Interactive multimedia platform with hands-on simulations</li>
-            <li>Live Q&amp;A, discussion forums, and personalised learner support</li>
-            <li>Certification, impact analysis, and sustainability planning</li>
+          <p>Training programme integrating computer vision techniques in CubeSat missions for space-based imaging, object detection, and data analysis. Participants deploy AI-driven vision systems for Earth observation and autonomous satellite operations — developed in collaboration with Creativa Egypt.</p>
+          <h4>Key Activities</h4>
+          <ul>
+            <li>EQF Level 3-aligned curriculum focused on AI-driven computer vision for CubeSat missions</li>
+            <li>Interactive multimedia learning materials and hands-on simulations</li>
+            <li>Live Q&amp;A sessions, discussion forums, and personalised learner support</li>
+            <li>Certification, impact analysis, and long-term sustainability planning</li>
           </ul>
         </div>
       </div>
 
-      <!-- Case 3: Cybersecurity -->
-      <div class="case-row" data-category="training">
-        <div class="case-row-logo">
+      <!-- CASE 3 -->
+      <div class="case-detail-panel" id="case3">
+        <div class="case-detail-logo">
           <img src="../assets/images/partner-eit.jpg" alt="EIT Deep Tech">
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Deep Tech Training</span>
             <span class="case-year">2024–2025</span>
           </div>
-          <h3>AI-Powered Cybersecurity Training Programme</h3>
+          <h2>AI-Powered Cybersecurity Training Programme</h2>
           <p class="case-client">EIT Deep Tech (OctaInsight Norway / Kiev Academic University) — EU</p>
-          <p>Programme equipping the European workforce with advanced AI-driven cybersecurity skills, enhancing digital resilience and promoting a diverse, inclusive talent pool — contributing to training 1 million EU residents in deep tech by end of 2025.</p>
-          <ul class="case-row-activities">
+          <p>Programme equipping the European workforce with advanced AI-driven cybersecurity skills, enhancing digital resilience and promoting a diverse, inclusive talent pool — contributing to the goal of training 1 million EU residents in deep tech fields by the end of 2025.</p>
+          <h4>Key Activities</h4>
+          <ul>
             <li>Inclusive EQF Level 3-aligned curriculum for AI-powered cybersecurity</li>
-            <li>Multimedia platform with live Q&amp;A and targeted outreach to underrepresented groups</li>
-            <li>Certification and quantitative impact measurement</li>
+            <li>Engaging multimedia platform with live Q&amp;A and accessibility accommodations</li>
+            <li>Targeted outreach to underrepresented groups in cybersecurity</li>
+            <li>Certification, learner performance feedback, and quantitative impact measurement</li>
           </ul>
         </div>
       </div>
 
-      <!-- Case 4: Electrolux Gripper -->
-      <div class="case-row" data-category="tooling">
-        <div class="case-row-logo">
+      <!-- CASE 4 -->
+      <div class="case-detail-panel" id="case4">
+        <div class="case-detail-logo">
           <img src="../assets/images/partner-electrolux.jpg" alt="Electrolux">
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Tooling Development</span>
             <span class="case-year">2015 &amp; 2022</span>
           </div>
-          <h3>Gripper Modification for Press Automation Transfer Arm</h3>
+          <h2>Gripper Modification for Press Automation Transfer Arm</h2>
           <p class="case-client">Electrolux — Gas Cookers Factory, Egypt</p>
-          <p>Redesign, fabrication, and delivery of a modified gripper for a press-automation transfer arm. A programme of three repeated projects delivered across two phases at an Electrolux manufacturing facility.</p>
-          <ul class="case-row-activities">
+          <p>Redesign, fabrication, and delivery of a modified gripper for a press-automation transfer arm at an Electrolux manufacturing facility. A programme of three repeated projects delivered across two phases.</p>
+          <h4>Key Activities</h4>
+          <ul>
             <li>Reverse engineering and redesign based on updated operational requirements</li>
-            <li>Full fabrication management of all tooling in scope</li>
+            <li>Full fabrication process management for all tooling in scope</li>
             <li>Factory acceptance testing and final delivery</li>
           </ul>
         </div>
       </div>
 
-      <!-- Case 5: Turbine Efficiency -->
-      <div class="case-row" data-category="engineering">
-        <div class="case-row-logo">
+      <!-- CASE 5 -->
+      <div class="case-detail-panel" id="case5">
+        <div class="case-detail-logo">
           <img src="../assets/images/partner-turbine.jpeg" alt="Turbine Efficiency">
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Engineering Analysis</span>
             <span class="case-year">2021</span>
           </div>
-          <h3>Modified Drive Train Torsional Analysis</h3>
+          <h2>Modified Drive Train Torsional Analysis</h2>
           <p class="case-client">Turbine Efficiency — United Kingdom</p>
           <p>Torsional vibration analysis of a modified combined drive train of a Siemens SGT-100-1S Gas Turbine, performed in accordance with API Recommended Practice for Packaged Gas Turbines.</p>
-          <ul class="case-row-activities">
+          <h4>Key Activities</h4>
+          <ul>
             <li>Computerised analysis of undamped torsional resonances and critical speeds</li>
-            <li>Campbell Diagram with critical speed plots and excitation mapping</li>
-            <li>Technical report with conclusions per API norms</li>
+            <li>Campbell Diagram with critical speed plots and excitation mapping (1×, 2×, 3× per revolution)</li>
+            <li>Technical report with conclusions and recommendations per API norms</li>
           </ul>
         </div>
       </div>
 
-      <!-- Case 6: Inkonova Drone -->
-      <div class="case-row" data-category="engineering">
-        <div class="case-row-logo">
+      <!-- CASE 6 -->
+      <div class="case-detail-panel" id="case6">
+        <div class="case-detail-logo">
           <img src="../assets/images/partner-inkonova.png" alt="Inkonova AB">
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Product Development</span>
             <span class="case-year">2023</span>
           </div>
-          <h3>Drone-Systems Aeronautical Engineering Consultancy</h3>
+          <h2>Drone-Systems Aeronautical Engineering Consultancy</h2>
           <p class="case-client">Inkonova AB — Sweden</p>
-          <p>Engineering services outsourcing for commercial drone system development, with a focus on the mining and underground industrial sector. Delivered under a long-term Engineering Services Outsourcing Contract.</p>
-          <ul class="case-row-activities">
+          <p>Engineering services outsourcing for commercial drone system development, with a focus on the mining and underground industrial sector — delivered under a long-term Engineering Services Outsourcing Contract.</p>
+          <h4>Key Activities</h4>
+          <ul>
             <li>Detail design of structural, electro-mechanical, and payload components</li>
             <li>Flight control and power hardware integration</li>
-            <li>Stress analysis, prototype development, and design verification testing</li>
+            <li>Stress analysis, prototype hardware development, and design verification testing</li>
             <li>CAD design (SolidWorks) and rapid prototyping via 3D printing</li>
           </ul>
         </div>
       </div>
 
-      <!-- Case 7: Asfour Crystal -->
-      <div class="case-row" data-category="engineering">
-        <div class="case-row-logo">
+      <!-- CASE 7 -->
+      <div class="case-detail-panel" id="case7">
+        <div class="case-detail-logo">
           <img src="../assets/images/partner-asfour.png" alt="Asfour Crystal">
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Systems Integration</span>
             <span class="case-year">2013–2014 &amp; 2022–2024</span>
           </div>
-          <h3>Production Cell Automation — Gantry System</h3>
+          <h2>Production Cell Automation — Gantry System</h2>
           <p class="case-client">Asfour Crystal International — Egypt</p>
-          <p>Development of a fully automated loading and unloading system for crystal processing machines. A programme of five integrated sub-projects across two phases — a decade-long engineering partnership delivering measurable productivity gains.</p>
-          <ul class="case-row-activities">
+          <p>Development of a fully automated loading and unloading system for crystal processing machines. A programme of five integrated sub-projects across two phases — a decade-long engineering partnership delivering measurable productivity improvements.</p>
+          <h4>Key Activities</h4>
+          <ul>
             <li>Production cell layout redesign and motion time study optimisation</li>
-            <li>Turntable/turnstyle machine design for automatic handling</li>
-            <li>Novel inverting machine design, fabrication, and integration</li>
-            <li>High-dynamic gantry robot commissioning and full documentation</li>
+            <li>Turntable/turnstyle machine design for automatic clock machine handling</li>
+            <li>Novel inverting machine design and fabrication</li>
+            <li>High-dynamic gantry robot (Gödel, Switzerland) integration and commissioning</li>
+            <li>Full system documentation — operation and maintenance manuals</li>
           </ul>
         </div>
       </div>
 
-      <!-- Case 8: Maadi Tooling -->
-      <div class="case-row" data-category="tooling">
-        <div class="case-row-logo case-row-logo--neutral">
-          <div class="case-row-logo-placeholder">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="56" height="56"><path d="M12 20h24M12 28h24M20 12v24M28 12v24"/><rect x="4" y="4" width="40" height="40" rx="4"/></svg>
-            <span>Maadi Company for Engineering Industries</span>
-          </div>
+      <!-- CASE 8 -->
+      <div class="case-detail-panel" id="case8">
+        <div class="case-detail-logo case-detail-logo--neutral">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="72" height="72"><rect x="6" y="6" width="52" height="52" rx="6"/><path d="M32 18v28M18 32h28"/></svg>
+          <span>Maadi Company for Engineering Industries</span>
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Tooling Development</span>
             <span class="case-year">2023–2025</span>
           </div>
-          <h3>Tooling Development for Precise Manufacturing</h3>
+          <h2>Tooling Development for Precise Manufacturing</h2>
           <p class="case-client">Maadi Company for Engineering Industries (Ministry of Military Production) — Egypt</p>
-          <p>Design review and fabrication management of 34 jigs and fixtures for precision manufacturing processes. A programme of 28 repeated projects delivering rigorous tooling quality across an extended engagement.</p>
-          <ul class="case-row-activities">
-            <li>Technical review and approval of jigs and fixtures designs</li>
+          <p>Design review and fabrication management of 34 jigs and fixtures for precision manufacturing processes. A programme of 28 repeated projects delivering rigorous tooling quality standards over an extended client engagement.</p>
+          <h4>Key Activities</h4>
+          <ul>
+            <li>Technical review and approval of all jig and fixture designs</li>
             <li>Full fabrication process management for all tooling in scope</li>
           </ul>
         </div>
       </div>
 
-      <!-- Case 9: ASENPRO Nozzle -->
-      <div class="case-row" data-category="engineering">
-        <div class="case-row-logo case-row-logo--neutral">
-          <div class="case-row-logo-placeholder">
-            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="56" height="56"><circle cx="24" cy="24" r="16"/><path d="M24 8v6M24 34v6M8 24h6M34 24h6"/></svg>
-            <span>ASEC Environmental Protection</span>
-          </div>
+      <!-- CASE 9 -->
+      <div class="case-detail-panel" id="case9">
+        <div class="case-detail-logo case-detail-logo--neutral">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" width="72" height="72"><circle cx="32" cy="32" r="22"/><path d="M32 10v8M32 46v8M10 32h8M46 32h8"/></svg>
+          <span>ASEC Environmental Protection (ASENPRO)</span>
         </div>
-        <div class="case-row-body">
-          <div class="case-row-meta">
+        <div class="case-detail-content">
+          <div class="case-detail-meta">
             <span class="tag">Product Development</span>
             <span class="case-year">2022–2024</span>
           </div>
-          <h3>Redesign of Nozzle for Dust Control Equipment</h3>
+          <h2>Redesign of Nozzle for Dust Control Equipment</h2>
           <p class="case-client">ASEC Environmental Protection (ASENPRO) — Egypt</p>
-          <p>Material substitution and redesign of a dust control nozzle — switching from die-cast aluminium to Fiberglass Reinforced Polyamide via injection moulding, achieving significant cost reduction without compromising performance.</p>
-          <ul class="case-row-activities">
-            <li>Geometrical characterisation from original metallic sample</li>
-            <li>Material selection, design drawings, and verification documentation</li>
+          <p>Material substitution and redesign of a dust control nozzle — changing from die-cast aluminium to Fiberglass Reinforced Polyamide (Nylon) via injection moulding, achieving significant cost reduction without compromising functional performance.</p>
+          <h4>Key Activities</h4>
+          <ul>
+            <li>Geometrical characterisation from original metallic part sample</li>
+            <li>Material selection study and new design verification documentation</li>
+            <li>Engineering documentation for the injection moulding production process</li>
             <li>Injection mould tooling fabrication and full production operations</li>
             <li>Full contracted quantity delivered to specification</li>
           </ul>
         </div>
       </div>
 
-    </div><!-- /cases-list -->
-  </div>
+    </div><!-- /cases-detail -->
+  </div><!-- /cases-master-detail -->
 </section>
 
 <!-- CTA -->
@@ -318,16 +364,15 @@
 
 <script src="../assets/js/nav.js"></script>
 <script>
-  const filters = document.querySelectorAll('.case-filter');
-  const rows = document.querySelectorAll('.case-row');
-  filters.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filters.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const f = btn.dataset.filter;
-      rows.forEach(r => {
-        r.style.display = (f === 'all' || r.dataset.category === f) ? '' : 'none';
-      });
+  const sidebarItems = document.querySelectorAll('.cases-sidebar-item');
+  const panels = document.querySelectorAll('.case-detail-panel');
+
+  sidebarItems.forEach(item => {
+    item.addEventListener('click', () => {
+      sidebarItems.forEach(i => i.classList.remove('active'));
+      panels.forEach(p => p.classList.remove('active'));
+      item.classList.add('active');
+      document.getElementById(item.dataset.case).classList.add('active');
     });
   });
 </script>
