@@ -179,6 +179,7 @@ nav ul li a.active {
   display: flex;
   min-height: 560px;
   overflow: hidden;
+  padding: 0;
 }
 .hero-panel {
   flex: 1;
