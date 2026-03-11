@@ -164,23 +164,22 @@ nav ul li a.active {
 .hero-headline-title {
   font-size: clamp(2.6rem, 6vw, 5rem);
   font-weight: 800;
-  color: var(--teal);
+  color: #0a4f4f;
   line-height: 1.1;
   margin: 0 0 16px 0;
   letter-spacing: -1px;
   text-align: center;
   white-space: nowrap;
-  text-shadow: 0 1px 4px rgba(255,255,255,0.9);
 }
 .hero-headline-sub {
   font-size: clamp(0.9rem, 1.6vw, 1.1rem);
-  color: var(--navy);
+  color: #1a2b3c;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 1.6;
   text-align: center;
-  opacity: 0.75;
+  opacity: 0.9;
 }
 
 /* ── HERO TRIPTYCH ── */
