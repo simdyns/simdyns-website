@@ -130,7 +130,7 @@ nav ul li a.active {
 
 /* ── HERO HEADLINE ── */
 .hero-headline {
-  background-image: url('../images/hero-main.jpg');
+  background-image: url('../images/hero-blueprint.png');
   background-size: cover;
   background-position: center;
   padding: 80px 24px 72px;
@@ -139,12 +139,6 @@ nav ul li a.active {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.hero-headline::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.55);
 }
 .hero-headline::after {
   content: '';
@@ -170,13 +164,13 @@ nav ul li a.active {
 .hero-headline-title {
   font-size: clamp(2.6rem, 6vw, 5rem);
   font-weight: 800;
-  color: var(--navy);
+  color: var(--teal);
   line-height: 1.1;
   margin: 0 0 16px 0;
   letter-spacing: -1px;
   text-align: center;
   white-space: nowrap;
-  text-shadow: 0 1px 3px rgba(255,255,255,0.6);
+  text-shadow: 0 1px 4px rgba(255,255,255,0.9);
 }
 .hero-headline-sub {
   font-size: clamp(0.9rem, 1.6vw, 1.1rem);
@@ -186,7 +180,7 @@ nav ul li a.active {
   text-transform: uppercase;
   line-height: 1.6;
   text-align: center;
-  opacity: 0.85;
+  opacity: 0.75;
 }
 
 /* ── HERO TRIPTYCH ── */
