@@ -155,14 +155,40 @@ nav ul li a.active {
   z-index: 1;
 }
 .hero-headline-title {
-  font-size: clamp(2.6rem, 6vw, 5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  text-align: center;
+}
+.hero-title-line1 {
+  font-size: clamp(2.4rem, 7vw, 5.5rem);
   font-weight: 800;
   color: #0a4f4f;
-  line-height: 1.1;
-  margin: 0 0 16px 0;
-  letter-spacing: -1px;
-  text-align: center;
+  letter-spacing: -2px;
+  line-height: 1;
+  opacity: 0;
+  transform: translateY(-24px);
+  animation: heroFadeDown 0.8s cubic-bezier(0.22,1,0.36,1) 0.1s forwards;
   white-space: nowrap;
+}
+.hero-title-line2 {
+  font-size: clamp(0.95rem, 2.8vw, 1.9rem);
+  font-weight: 500;
+  color: #1a5f6a;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.35s forwards;
+}
+@keyframes heroFadeDown {
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes heroFadeUp {
+  to { opacity: 1; transform: translateY(0); }
 }
 .hero-headline-sub {
   font-size: clamp(0.9rem, 1.6vw, 1.1rem);
@@ -1075,6 +1101,8 @@ footer {
 #menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 600px) {
+  .hero-title-line1 { white-space: normal; letter-spacing: -1px; }
+  .hero-title-line2 { letter-spacing: 1.5px; }
   .panel-content { padding: 40px 20px 36px; }
   .panel-content h2 { font-size: 1.35rem; }
   .panel-btns { flex-direction: row; flex-wrap: wrap; max-width: 100%; }
