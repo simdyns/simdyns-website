@@ -308,6 +308,8 @@ nav ul li a.active {
 }
 .btn-outline:hover { background: white; color: var(--navy); }
 .btn-teal { background: var(--teal); color: white; }
+.btn-outline-teal { background: transparent; color: var(--teal); border: 2px solid var(--teal); }
+.btn-outline-teal:hover { background: var(--teal); color: white; }
 .btn-teal:hover { background: var(--teal-dark); color: white; }
 
 /* ── SECTIONS ── */
@@ -431,9 +433,12 @@ section { padding: 72px 24px; }
 /* ── SOLUTIONS GRID ── */
 .solutions-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 28px;
   margin-top: 40px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .solution-card {
   background: var(--white);
