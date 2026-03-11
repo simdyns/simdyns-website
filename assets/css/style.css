@@ -836,6 +836,156 @@ footer {
 }
 .social-links a:hover { background: var(--teal); }
 
+/* ── CASE STUDIES ── */
+.case-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+.case-filter {
+  padding: 8px 20px;
+  border: 2px solid var(--mid-gray);
+  background: transparent;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  transition: all .2s;
+}
+.case-filter:hover, .case-filter.active {
+  border-color: var(--teal);
+  background: var(--teal);
+  color: #fff;
+}
+.cases-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  padding-bottom: 60px;
+}
+.case-card {
+  background: var(--white);
+  border: 1px solid var(--mid-gray);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow .25s, transform .25s;
+}
+.case-card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,.10);
+  transform: translateY(-3px);
+}
+.case-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+}
+.case-body {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.case-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.case-year {
+  font-size: 12px;
+  color: var(--text-light);
+  font-weight: 500;
+}
+.case-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.35;
+  margin: 0;
+}
+.case-client {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--teal);
+  margin: 0;
+}
+.case-body > p:not(.case-client) {
+  font-size: 0.88rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  margin: 0;
+}
+.case-activities {
+  margin-top: 6px;
+  border-top: 1px solid var(--mid-gray);
+  padding-top: 12px;
+}
+.case-activities h4 {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+.case-activities ul {
+  padding-left: 16px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.case-activities ul li {
+  font-size: 0.82rem;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+/* Cases preview on homepage */
+.cases-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.case-preview-card {
+  background: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--mid-gray);
+  transition: box-shadow .25s, transform .25s;
+}
+.case-preview-card:hover {
+  box-shadow: 0 6px 24px rgba(0,0,0,.09);
+  transform: translateY(-3px);
+}
+.case-preview-img {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+.case-preview-body {
+  padding: 20px;
+}
+.case-preview-body .tag { margin-bottom: 8px; display: inline-block; }
+.case-preview-body h3 {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1.35;
+  margin: 0 0 6px;
+}
+.case-preview-body p {
+  font-size: 0.84rem;
+  color: var(--text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
 /* ── RESPONSIVE ── */
 @media (max-width: 900px) {
   .hero-triptych { flex-direction: column; }
@@ -858,6 +1008,8 @@ footer {
     inset: 0;
   }
   .why-grid, .about-grid, .contact-grid { grid-template-columns: 1fr; }
+  .cases-grid { grid-template-columns: 1fr 1fr; }
+  .cases-preview-grid { grid-template-columns: 1fr 1fr; }
   .service-card { grid-template-columns: 1fr; }
   .service-card.reverse { direction: ltr; }
   .solutions-grid { grid-template-columns: 1fr 1fr; }
@@ -894,7 +1046,7 @@ footer {
   .panel-content h2 { font-size: 1.35rem; }
   .panel-btns { flex-direction: row; flex-wrap: wrap; max-width: 100%; }
   .panel-btn { flex: 1; min-width: 130px; text-align: center; }
-  .solutions-grid, .news-grid, .team-grid { grid-template-columns: 1fr; }
+  .solutions-grid, .news-grid, .team-grid, .cases-grid, .cases-preview-grid { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr; }
   .core-competences ul { grid-template-columns: 1fr; }
   #menu-toggle { display: flex; }
