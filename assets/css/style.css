@@ -134,7 +134,8 @@ nav ul li a.active {
   background-size: cover;
   background-position: center;
   padding: 80px 24px 80px;
-  margin-bottom: -1px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   border-bottom: none;
   position: relative;
   display: flex;
