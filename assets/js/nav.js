@@ -1,9 +1,10 @@
 // Highlight active nav link
 document.addEventListener('DOMContentLoaded', () => {
-  const path = window.location.pathname.replace(/\/$/, '').split('/').pop() || 'index';
+  const currentHref = window.location.href;
   document.querySelectorAll('nav a').forEach(a => {
-    const href = a.getAttribute('href').replace(/\/$/, '').split('/').pop() || 'index';
-    if (href === path) a.classList.add('active');
+    a.classList.remove('active');
+    const linkHref = new URL(a.getAttribute('href'), currentHref).href;
+    if (linkHref === currentHref) a.classList.add('active');
   });
 
   // Mobile menu toggle
