@@ -130,12 +130,13 @@ nav ul li a.active {
 
 /* ── HERO HEADLINE ── */
 .hero-headline {
-  background-image: url('../images/hero-blueprint-hd.jpg');
+  background-image: url('../images/hero-bg-bearing.jpg');
   background-size: cover;
-  background-position: center;
-  padding: 100px 24px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  background-position: center 38%;
+  padding: clamp(80px, 14vh, 130px) 24px clamp(70px, 12vh, 110px);
+  margin-top: 0;
+  margin-bottom: 0;
+  min-height: calc(100vh - 100px);
   position: relative;
   display: flex;
   justify-content: center;
@@ -144,7 +145,12 @@ nav ul li a.active {
 .hero-headline-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(255,255,255,0.45);
+  background: linear-gradient(
+    155deg,
+    rgba(8,18,45,0.92) 0%,
+    rgba(12,28,65,0.72) 50%,
+    rgba(8,18,45,0.88) 100%
+  );
 }
 .hero-headline::after { display: none; }
 .hero-headline-inner {
@@ -181,9 +187,9 @@ nav ul li a.active {
   text-align: center;
 }
 .hero-title-line1 {
-  font-size: clamp(3rem, 9vw, 6.5rem);
+  font-size: clamp(3.5rem, 10vw, 7.5rem);
   font-weight: 800;
-  color: var(--navy);
+  color: #ffffff;
   letter-spacing: -3px;
   line-height: 1;
   opacity: 0;
@@ -194,8 +200,8 @@ nav ul li a.active {
 .hero-title-line2 {
   font-size: clamp(0.75rem, 1.8vw, 1.2rem);
   font-weight: 600;
-  color: var(--teal-dark);
-  letter-spacing: 5px;
+  color: #9ec8f0;
+  letter-spacing: 6px;
   text-transform: uppercase;
   line-height: 1.2;
   opacity: 0;
@@ -205,7 +211,7 @@ nav ul li a.active {
 .hero-title-divider {
   width: 56px;
   height: 2px;
-  background: var(--teal);
+  background: #5c8fd4;
   margin: 28px auto;
   opacity: 0;
   animation: heroFadeUp 0.6s ease 0.6s forwards;
@@ -224,7 +230,7 @@ nav ul li a.active {
   overflow: hidden;
   border-radius: 14px;
   margin-bottom: 22px;
-  box-shadow: 0 6px 20px rgba(14,165,165,0.30);
+  box-shadow: 0 6px 28px rgba(50,100,200,0.45);
   opacity: 0;
   animation: heroFadeDown 0.6s cubic-bezier(0.22,1,0.36,1) 0s forwards;
   flex-shrink: 0;
@@ -236,14 +242,61 @@ nav ul li a.active {
   display: block;
 }
 .hero-title-pillars span {
-  font-size: clamp(0.95rem, 2.2vw, 1.25rem);
+  font-size: clamp(0.88rem, 1.8vw, 1.08rem);
   font-weight: 600;
-  color: var(--navy);
-  letter-spacing: 0.4px;
+  color: rgba(200,225,255,0.95);
+  letter-spacing: 0.3px;
   padding: 9px 22px;
-  border: 1.5px solid var(--teal);
+  border: 1.5px solid rgba(92,143,212,0.60);
   border-radius: 100px;
-  background: rgba(14,165,165,0.08);
+  background: rgba(20,50,110,0.30);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.hero-single-phrase {
+  font-size: clamp(1.15rem, 2.8vw, 1.6rem);
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+  opacity: 0;
+  animation: heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.75s forwards;
+}
+.hero-sub-tagline {
+  font-size: clamp(0.88rem, 1.5vw, 1rem);
+  color: rgba(180,210,255,0.65);
+  margin-top: 14px;
+  line-height: 1.65;
+  letter-spacing: 0.2px;
+  max-width: 560px;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 1.0s forwards;
+}
+.hero-cta-row {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+  animation: heroFadeUp 0.6s ease 1.15s forwards;
+}
+.hero-cta-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 28px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: rgba(180,215,255,0.88);
+  border: 2px solid rgba(92,143,212,0.45);
+  border-radius: 4px;
+  transition: all 0.25s;
+  letter-spacing: 0.3px;
+}
+.hero-cta-ghost:hover {
+  border-color: rgba(130,180,255,0.80);
+  color: #d0e8ff;
+  background: rgba(30,70,140,0.18);
 }
 @keyframes heroFadeDown {
   to { opacity: 1; transform: translateY(0); }
@@ -253,13 +306,29 @@ nav ul li a.active {
 }
 .hero-headline-sub {
   font-size: clamp(0.9rem, 1.6vw, 1.1rem);
-  color: #1a2b3c;
+  color: rgba(255,255,255,0.75);
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   line-height: 1.6;
   text-align: center;
   opacity: 0.9;
+}
+
+/* ── TRIPTYCH HEADER ── */
+.triptych-header {
+  background: var(--navy);
+  text-align: center;
+  padding: 36px 24px 28px;
+  border-top: 3px solid rgba(92,143,212,0.40);
+}
+.triptych-header h2 {
+  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-weight: 700;
+  color: rgba(200,225,255,0.90);
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 /* ── HERO TRIPTYCH ── */
@@ -1162,23 +1231,25 @@ footer {
 #menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 768px) {
-  .hero-headline { padding: 70px 20px; margin-top: 60px; margin-bottom: 40px; }
+  .hero-headline { padding: 60px 20px 50px; margin-top: 0; margin-bottom: 0; }
   .hero-sd-logo { width: 60px; height: 60px; }
   .hero-sd-logo img { width: 60px; height: 60px; }
   .hero-title-divider { margin: 20px auto; }
-  .hero-title-pillars { gap: 8px; }
-  .hero-title-pillars span { padding: 7px 16px; }
+  .hero-single-phrase { font-size: 1.2rem; }
+  .hero-sub-tagline { font-size: 0.9rem; margin-top: 12px; }
+  .triptych-header { padding: 24px 20px 18px; }
+  .triptych-header h2 { font-size: 1rem; letter-spacing: 2px; }
 }
 
 @media (max-width: 600px) {
-  .hero-headline { padding: 52px 16px; margin-bottom: 32px; }
+  .hero-headline { padding: 48px 16px 44px; margin-top: 0; margin-bottom: 0; }
   .hero-sd-logo { width: 52px; height: 52px; border-radius: 10px; margin-bottom: 16px; }
   .hero-sd-logo img { width: 52px; height: 52px; }
   .hero-title-line1 { white-space: normal; letter-spacing: -1px; }
   .hero-title-line2 { letter-spacing: 2px; font-size: 0.78rem; }
   .hero-title-divider { width: 40px; margin: 16px auto; }
-  .hero-title-pillars { flex-direction: column; align-items: center; gap: 8px; }
-  .hero-title-pillars span { width: 100%; max-width: 260px; text-align: center; font-size: 0.9rem; padding: 8px 16px; }
+  .hero-single-phrase { font-size: 1.05rem; padding: 0 8px; }
+  .hero-sub-tagline { font-size: 0.85rem; padding: 0 8px; }
   .panel-content { padding: 40px 20px 36px; }
   .panel-content h2 { font-size: 1.35rem; }
   .panel-btns { flex-direction: row; flex-wrap: wrap; max-width: 100%; }
