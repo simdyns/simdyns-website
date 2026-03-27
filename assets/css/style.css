@@ -29,7 +29,7 @@ a:hover { color: var(--teal-light); }
 
 /* ── LOGO IMAGE ── */
 .logo-img {
-  height: 80px;
+  height: 62px;
   width: auto;
   display: block;
 }
@@ -49,13 +49,12 @@ header {
   box-shadow: 0 2px 10px rgba(0,0,0,.08);
 }
 .nav-inner {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 32px;
+  max-width: 100%;
+  padding: 0 clamp(20px, 4vw, 60px) 0 clamp(40px, 7vw, 120px);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 76px;
 }
 .logo {
   display: flex;
@@ -140,36 +139,44 @@ nav ul li a.active {
   display: flex;
   align-items: center;
 }
+/* Diagonal overlay: white-tinted left zone fades at the diagonal cut, right is raw image */
 .hero-headline-overlay {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(105deg,
-      rgba(255,255,255,0.55) 0%,
-      rgba(255,255,255,0.18) 40%,
-      rgba(12,30,50,0.45) 100%
-    );
+  background: linear-gradient(105deg,
+    rgba(255,255,255,0.62) 0%,
+    rgba(255,255,255,0.50) 35%,
+    rgba(255,255,255,0.10) 58%,
+    rgba(255,255,255,0.00) 72%
+  );
+  /* diagonal clip: covers left portion, cuts diagonally toward bottom-right */
+  -webkit-mask-image: linear-gradient(105deg, black 0%, black 50%, transparent 72%);
+  mask-image: linear-gradient(105deg, black 0%, black 50%, transparent 72%);
 }
 .hero-headline::after { display: none; }
+
+/* Full-width inner — brand left, cards right edge */
 .hero-headline-inner {
-  max-width: 1160px;
   width: 100%;
-  margin: 0 auto;
-  padding: clamp(20px, 3.5vh, 44px) clamp(24px, 5vw, 80px);
+  max-width: 100%;
+  padding: clamp(20px, 5vh, 60px) clamp(20px, 4vw, 60px) clamp(20px, 5vh, 60px) clamp(40px, 7vw, 120px);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
-  text-align: left;
+  gap: 40px;
   position: relative;
   z-index: 1;
 }
+
+/* Brand block — sits in the white-light left zone, centered vertically */
 .hero-headline-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   flex: 1 1 auto;
+  max-width: 540px;
 }
 /* ── HERO BRAND BLOCK ── */
 .hero-brand {
@@ -214,94 +221,95 @@ nav ul li a.active {
   opacity: 0;
   animation: heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.45s forwards;
 }
-/* ── HERO SERVICE CARDS ── */
+/* ── HERO SERVICE CARDS — right/raw-image zone ── */
 .hero-services {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  flex: 0 0 310px;
-  width: 310px;
+  gap: 8px;
+  flex: 0 0 270px;
+  width: 270px;
+  margin-right: 0;
   opacity: 0;
   animation: heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.7s forwards;
 }
 .hero-service-card {
-  background: rgba(255,255,255,0.82);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255,255,255,0.60);
-  border-top: 4px solid var(--teal);
+  background: rgba(6, 18, 34, 0.55);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(14,165,165,0.22);
+  border-left: 4px solid var(--teal);
   border-radius: 6px;
-  padding: 18px 20px 16px;
-  color: var(--navy);
+  padding: 12px 14px 10px;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
-  transition: transform 0.22s, box-shadow 0.22s, background 0.22s, border-top-color 0.22s;
+  gap: 6px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.28);
+  transition: background 0.22s, transform 0.22s, box-shadow 0.22s, border-left-color 0.22s;
 }
 .hero-service-card:hover {
-  background: rgba(255,255,255,0.94);
-  transform: translateY(-4px);
-  box-shadow: 0 10px 32px rgba(0,0,0,0.22);
-  border-top-color: var(--teal-dark);
+  background: rgba(6, 18, 34, 0.78);
+  transform: translateX(-4px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.40);
+  border-left-color: var(--teal-light);
 }
 .hero-service-card-top {
   display: flex;
   align-items: center;
-  gap: 11px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--mid-gray);
+  gap: 9px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid rgba(14,165,165,0.25);
 }
 .hero-service-icon {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   color: var(--teal);
   flex-shrink: 0;
 }
 .hero-service-icon svg { width: 100%; height: 100%; }
 .hero-service-card h3 {
-  font-size: 0.93rem;
+  font-size: 0.84rem;
   font-weight: 700;
-  color: var(--navy);
+  color: #ffffff;
   margin: 0;
   letter-spacing: 0.2px;
 }
 .hero-service-card p {
-  font-size: 0.77rem;
-  color: var(--text);
-  line-height: 1.6;
+  font-size: 0.71rem;
+  color: rgba(210, 228, 240, 0.88);
+  line-height: 1.5;
   margin: 0;
   flex: 1;
 }
 /* Buttons pinned to bottom */
 .hero-service-btns {
   display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-  padding-top: 10px;
-  border-top: 1px solid var(--mid-gray);
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 7px;
+  border-top: 1px solid rgba(255,255,255,0.12);
   margin-top: auto;
 }
 .hero-service-btn {
-  font-size: 0.71rem;
+  font-size: 0.67rem;
   font-weight: 700;
-  padding: 6px 14px;
+  padding: 5px 11px;
   border-radius: 4px;
   text-decoration: none;
   letter-spacing: 0.4px;
   text-transform: uppercase;
+  text-align: center;
   background: var(--teal);
   color: #fff;
   transition: background 0.18s, transform 0.15s;
-  white-space: nowrap;
 }
 .hero-service-btn:hover { background: var(--teal-dark); color: #fff; transform: translateY(-1px); }
 .hero-service-btn-ghost {
   background: transparent;
-  border: 1.5px solid var(--teal);
-  color: var(--teal-dark);
+  border: 1.5px solid rgba(14,165,165,0.55);
+  color: var(--teal-light);
 }
-.hero-service-btn-ghost:hover { background: var(--teal); color: #fff; }
+.hero-service-btn-ghost:hover { background: rgba(14,165,165,0.20); border-color: var(--teal-light); color: #fff; }
 
 /* silence old selectors */
 .hero-eyebrow-label, .hero-headline-title, .hero-title-line1,
@@ -1238,21 +1246,66 @@ footer {
 #menu-toggle.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 @media (max-width: 768px) {
-  .hero-headline { min-height: 100vh; background-position: center center; }
-  .hero-headline-inner { flex-direction: column; align-items: flex-start; gap: 28px; padding: 20px 20px; }
-  .hero-services { flex: none; width: 100%; gap: 10px; }
-  .hero-brand { gap: 14px; }
-  .hero-brand-name { font-size: clamp(2.8rem, 9vw, 4rem); letter-spacing: -2px; }
-  .hero-brand-divider { height: 42px; }
+  /* Fill screen accounting for mobile browser chrome */
+  .hero-headline {
+    min-height: 100svh;
+    background-position: 60% center;
+  }
+  /* Remove diagonal mask, use solid overlay for full readability */
+  .hero-headline-overlay {
+    -webkit-mask-image: none;
+    mask-image: none;
+    background: rgba(255,255,255,0.68);
+  }
+  /* Stack vertically, center everything, clear the sticky nav */
+  .hero-headline-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+    padding: 90px 24px 40px;
+  }
+  .hero-headline-left {
+    align-items: center;
+    max-width: 100%;
+  }
+  /* Brand centered */
+  .hero-brand { gap: 14px; justify-content: center; }
+  .hero-brand-name { font-size: clamp(3rem, 11vw, 4.2rem); letter-spacing: -2px; }
+  .hero-brand-divider { height: 44px; }
   .hero-brand-sub { font-size: 0.68rem; letter-spacing: 4px; }
-  .hero-tagline { font-size: 1rem; margin-top: 12px; }
-  .triptych-header { padding: 10px 20px 9px; }
-  .triptych-header h2 { font-size: 0.65rem; letter-spacing: 3px; }
+  /* Tagline centered, tighter */
+  .hero-tagline { font-size: 1rem; margin-top: 10px; text-align: center; max-width: 100%; }
+  /* Cards: full width, compact — darker background works against light overlay */
+  .hero-services { flex: none; width: 100%; gap: 10px; }
+  .hero-service-card {
+    border-left: 4px solid var(--teal);
+    border-top: none;
+    padding: 15px 16px 13px;
+    background: rgba(6, 18, 34, 0.72);
+  }
+  .hero-service-card-top { padding-bottom: 8px; }
+  .hero-service-card h3 { font-size: 0.88rem; }
+  .hero-service-card p {
+    font-size: 0.74rem;
+  }
+  .hero-service-btns { gap: 6px; padding-top: 8px; flex-direction: row; flex-wrap: wrap; }
+  .hero-service-btn { font-size: 0.68rem; padding: 5px 12px; }
+}
+
+@media (max-width: 480px) {
+  .hero-headline { background-position: 55% center; }
+  .hero-headline-inner { padding: 110px 16px 32px; gap: 16px; }
+  .hero-brand-name { font-size: clamp(2.6rem, 13vw, 3.4rem); letter-spacing: -2px; }
+  .hero-brand-divider { height: 38px; }
+  .hero-brand-sub { font-size: 0.62rem; letter-spacing: 3px; max-width: 110px; }
+  .hero-tagline { font-size: 0.92rem; }
+  .hero-service-card { padding: 13px 14px 12px; }
+  .hero-service-card h3 { font-size: 0.84rem; }
 }
 
 @media (max-width: 600px) {
-  .hero-headline { min-height: 100vh; background-position: center center; }
-  .hero-headline-inner { padding: 16px 16px; }
+  .hero-headline-inner { padding: 110px 16px 32px; }
   .hero-brand { gap: 10px; }
   .hero-brand-name { font-size: clamp(2.4rem, 11vw, 3.2rem); letter-spacing: -2px; }
   .hero-brand-divider { height: 36px; }
@@ -1265,7 +1318,7 @@ footer {
   nav ul {
     display: none;
     position: fixed;
-    top: 100px;
+    top: 76px;
     left: 0;
     right: 0;
     background: var(--white);
