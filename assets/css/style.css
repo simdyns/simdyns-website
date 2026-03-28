@@ -137,7 +137,8 @@ nav ul li a.active {
   margin-bottom: 0;
   position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: stretch;
 }
 /* Diagonal overlay: white-tinted left zone fades at the diagonal cut, right is raw image */
 .hero-headline-overlay {
@@ -155,28 +156,28 @@ nav ul li a.active {
 }
 .hero-headline::after { display: none; }
 
-/* Full-width inner — brand left, cards right edge */
+/* Full-height inner — brand occupies top, cards sit above bottom edge */
 .hero-headline-inner {
   width: 100%;
   max-width: 100%;
-  padding: clamp(20px, 5vh, 60px) clamp(20px, 4vw, 60px) clamp(20px, 5vh, 60px) clamp(40px, 7vw, 120px);
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
   justify-content: space-between;
-  gap: 40px;
+  flex: 1;
   position: relative;
   z-index: 1;
+  padding-bottom: clamp(60px, 11vh, 130px);
 }
 
-/* Brand block — sits in the white-light left zone, centered vertically */
+/* Brand block — vertically centred in the upper zone */
 .hero-headline-left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  flex: 1 1 auto;
-  max-width: 540px;
+  flex: 1;
+  padding: clamp(60px, 11vh, 130px) clamp(24px, 4vw, 60px) clamp(36px, 5vh, 64px) clamp(40px, 7vw, 120px);
+  max-width: 780px;
 }
 /* ── HERO BRAND BLOCK ── */
 .hero-brand {
@@ -211,89 +212,161 @@ nav ul li a.active {
 }
 /* ── HERO TAGLINE ── */
 .hero-tagline {
-  font-size: clamp(1.2rem, 2.5vw, 1.85rem);
+  font-size: clamp(1.25rem, 2.6vw, 1.85rem);
   font-weight: 700;
   color: var(--navy);
-  line-height: 1.35;
+  line-height: 1.38;
   letter-spacing: -0.2px;
   margin-top: 26px;
-  max-width: 540px;
+  max-width: none;
+  padding-left: 0;
+  border-left: none;
   opacity: 0;
   animation: heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.45s forwards;
 }
-/* ── HERO SERVICE CARDS — right/raw-image zone ── */
-.hero-services {
+.hero-tagline-accent {
+  color: var(--teal-dark);
+  font-weight: 800;
+}
+
+/* ── HERO SERVICE LINE — full-width proof-point bridge strip ── */
+.hero-service-line {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  flex: 0 0 auto;
+  background: rgba(6, 18, 34, 0.52);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(14, 165, 165, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 20px clamp(40px, 7vw, 120px);
+  opacity: 0;
+  animation: heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.65s forwards;
+}
+.hero-si {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  flex: 0 0 270px;
-  width: 270px;
+  gap: 5px;
+  padding-right: 28px;
+  margin-right: 28px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+.hero-si:last-child {
+  border-right: none;
+  padding-right: 0;
   margin-right: 0;
-  opacity: 0;
-  animation: heroFadeUp 0.8s cubic-bezier(0.22,1,0.36,1) 0.7s forwards;
+}
+.hero-si-n {
+  font-size: 0.58rem;
+  font-weight: 700;
+  color: var(--teal-light);
+  letter-spacing: 2px;
+  margin-bottom: 2px;
+}
+.hero-si-title {
+  display: block;
+  font-size: 0.90rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: -0.1px;
+}
+.hero-si-desc {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.62);
+  line-height: 1.45;
+  letter-spacing: 0;
+}
+
+/* ── HERO SERVICE CARDS — full-width horizontal bottom strip ── */
+@keyframes heroCardIn {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-services {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  flex: 0 0 auto;
+  width: 100%;
+  border-top: 1px solid rgba(255,255,255,0.14);
 }
 .hero-service-card {
-  background: rgba(6, 18, 34, 0.55);
+  flex: 1;
+  background: rgba(6, 18, 34, 0.60);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(14,165,165,0.22);
-  border-left: 4px solid var(--teal);
-  border-radius: 6px;
-  padding: 12px 14px 10px;
+  border-top: 3px solid transparent;
+  border-right: 1px solid rgba(255,255,255,0.09);
+  border-left: none;
+  border-bottom: none;
+  border-radius: 0;
+  padding: 32px 36px 26px;
   color: #fff;
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.28);
-  transition: background 0.22s, transform 0.22s, box-shadow 0.22s, border-left-color 0.22s;
+  gap: 0;
+  box-shadow: none;
+  transition: background 0.22s, border-top-color 0.22s;
+  opacity: 0;
+  animation: heroCardIn 0.65s cubic-bezier(0.22,1,0.36,1) both;
 }
+.hero-service-card:nth-child(1) { animation-delay: 0.55s; }
+.hero-service-card:nth-child(2) { animation-delay: 0.80s; }
+.hero-service-card:nth-child(3) { animation-delay: 1.05s; }
+.hero-service-card:last-child { border-right: none; }
 .hero-service-card:hover {
-  background: rgba(6, 18, 34, 0.78);
-  transform: translateX(-4px);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.40);
-  border-left-color: var(--teal-light);
+  background: rgba(6, 18, 34, 0.85);
+  border-top-color: var(--teal);
+  transform: none;
+  box-shadow: none;
 }
 .hero-service-card-top {
   display: flex;
   align-items: center;
-  gap: 9px;
-  padding-bottom: 7px;
+  gap: 12px;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
   border-bottom: 1px solid rgba(14,165,165,0.25);
 }
 .hero-service-icon {
-  width: 18px;
-  height: 18px;
+  width: 26px;
+  height: 26px;
   color: var(--teal);
   flex-shrink: 0;
 }
 .hero-service-icon svg { width: 100%; height: 100%; }
 .hero-service-card h3 {
-  font-size: 0.84rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: #ffffff;
   margin: 0;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
 }
 .hero-service-card p {
-  font-size: 0.71rem;
+  font-size: 0.88rem;
   color: rgba(210, 228, 240, 0.88);
-  line-height: 1.5;
-  margin: 0;
+  line-height: 1.6;
+  margin: 0 0 18px;
   flex: 1;
 }
-/* Buttons pinned to bottom */
+/* Buttons side by side */
 .hero-service-btns {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
-  padding-top: 7px;
-  border-top: 1px solid rgba(255,255,255,0.12);
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: wrap;
   margin-top: auto;
 }
 .hero-service-btn {
-  font-size: 0.67rem;
+  font-size: 0.74rem;
   font-weight: 700;
-  padding: 5px 11px;
+  padding: 7px 14px;
   border-radius: 4px;
   text-decoration: none;
   letter-spacing: 0.4px;
@@ -1257,51 +1330,54 @@ footer {
     mask-image: none;
     background: rgba(255,255,255,0.68);
   }
-  /* Stack vertically, center everything, clear the sticky nav */
+  /* Stack vertically, center everything */
   .hero-headline-inner {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 20px;
-    padding: 90px 24px 40px;
+    gap: 0;
+    padding: 100px 0 0;
   }
   .hero-headline-left {
     align-items: center;
     max-width: 100%;
+    padding: 0 24px 32px;
   }
   /* Brand centered */
   .hero-brand { gap: 14px; justify-content: center; }
   .hero-brand-name { font-size: clamp(3rem, 11vw, 4.2rem); letter-spacing: -2px; }
   .hero-brand-divider { height: 44px; }
   .hero-brand-sub { font-size: 0.68rem; letter-spacing: 4px; }
-  /* Tagline centered, tighter */
-  .hero-tagline { font-size: 1rem; margin-top: 10px; text-align: center; max-width: 100%; }
-  /* Cards: full width, compact — darker background works against light overlay */
-  .hero-services { flex: none; width: 100%; gap: 10px; }
+  /* Tagline — readable at mobile size */
+  .hero-tagline { font-size: 1.2rem; margin-top: 14px; text-align: center; max-width: 100%; line-height: 1.4; }
+  /* Cards: stack vertically full-width */
+  .hero-services { flex-direction: column; border-top: none; }
   .hero-service-card {
-    border-left: 4px solid var(--teal);
-    border-top: none;
-    padding: 15px 16px 13px;
-    background: rgba(6, 18, 34, 0.72);
+    flex: none;
+    border-top: 1px solid rgba(255,255,255,0.10);
+    border-right: none;
+    border-left: 4px solid transparent;
+    border-bottom: none;
+    padding: 22px 24px 18px;
+    background: rgba(6, 18, 34, 0.78);
   }
-  .hero-service-card-top { padding-bottom: 8px; }
-  .hero-service-card h3 { font-size: 0.88rem; }
-  .hero-service-card p {
-    font-size: 0.74rem;
-  }
-  .hero-service-btns { gap: 6px; padding-top: 8px; flex-direction: row; flex-wrap: wrap; }
-  .hero-service-btn { font-size: 0.68rem; padding: 5px 12px; }
+  .hero-service-card:hover { border-top-color: rgba(255,255,255,0.10); border-left-color: var(--teal); }
+  .hero-service-card h3 { font-size: 1.05rem; }
+  .hero-service-card p { font-size: 0.86rem; line-height: 1.6; }
+  .hero-service-btn { font-size: 0.74rem; padding: 7px 14px; }
 }
 
 @media (max-width: 480px) {
   .hero-headline { background-position: 55% center; }
-  .hero-headline-inner { padding: 110px 16px 32px; gap: 16px; }
+  .hero-headline-inner { padding-top: 90px; }
+  .hero-headline-left { padding: 0 18px 28px; }
   .hero-brand-name { font-size: clamp(2.6rem, 13vw, 3.4rem); letter-spacing: -2px; }
   .hero-brand-divider { height: 38px; }
   .hero-brand-sub { font-size: 0.62rem; letter-spacing: 3px; max-width: 110px; }
-  .hero-tagline { font-size: 0.92rem; }
-  .hero-service-card { padding: 13px 14px 12px; }
-  .hero-service-card h3 { font-size: 0.84rem; }
+  .hero-tagline { font-size: 1.08rem; }
+  .hero-service-card { padding: 20px 18px 16px; }
+  .hero-service-card h3 { font-size: 1rem; }
+  .hero-service-card p { font-size: 0.82rem; }
 }
 
 @media (max-width: 600px) {
@@ -1310,7 +1386,7 @@ footer {
   .hero-brand-name { font-size: clamp(2.4rem, 11vw, 3.2rem); letter-spacing: -2px; }
   .hero-brand-divider { height: 36px; }
   .hero-brand-sub { font-size: 0.6rem; letter-spacing: 3px; max-width: 100px; }
-  .hero-tagline { font-size: 0.88rem; margin-top: 10px; }
+  .hero-tagline { font-size: 1.1rem; margin-top: 10px; }
   .solutions-grid, .news-grid, .team-grid, .cases-grid, .cases-preview-grid { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1fr; }
   .core-competences ul { grid-template-columns: 1fr; }
