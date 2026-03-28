@@ -33,6 +33,19 @@
   <h1>Our Services</h1>
 </div>
 
+<!-- Service filter tabs -->
+<div class="service-tabs-bar">
+  <div class="container">
+    <div class="service-tabs">
+      <button class="service-tab active" data-target="all">All Services</button>
+      <button class="service-tab" data-target="cad">Computer Aided Design</button>
+      <button class="service-tab" data-target="ems">Energy Management</button>
+      <button class="service-tab" data-target="ipm">Innovation &amp; Project Management</button>
+      <button class="service-tab" data-target="dtc">Deep Tech Training</button>
+    </div>
+  </div>
+</div>
+
 <section>
   <div class="container">
     <div class="service-cards">
@@ -166,5 +179,65 @@
 </footer>
 
 <script src="../assets/js/nav.js"></script>
+<script>
+  const tabs = document.querySelectorAll('.service-tab');
+  const cards = document.querySelectorAll('.service-card');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const target = tab.dataset.target;
+
+      cards.forEach(card => {
+        if (target === 'all' || card.id === target) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Scroll to the card title, offset for sticky header + tab bar
+      if (target !== 'all') {
+        const el = document.getElementById(target);
+        if (el) {
+          setTimeout(() => {
+            const header = document.querySelector('header');
+            const tabBar = document.querySelector('.service-tabs-bar');
+            const offset = (header ? header.offsetHeight : 64) + (tabBar ? tabBar.offsetHeight : 56) + 16;
+            const top = el.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({ top, behavior: 'smooth' });
+          }, 50);
+        }
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Activate tab if page loaded with a hash (e.g. services/index.html#ems)
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    const matchTab = document.querySelector(`.service-tab[data-target="${hash}"]`);
+    if (matchTab) {
+      tabs.forEach(t => t.classList.remove('active'));
+      matchTab.classList.add('active');
+      cards.forEach(card => {
+        card.style.display = (card.id === hash) ? '' : 'none';
+      });
+      setTimeout(() => {
+        const el = document.getElementById(hash);
+        if (el) {
+          const header = document.querySelector('header');
+          const tabBar = document.querySelector('.service-tabs-bar');
+          const offset = (header ? header.offsetHeight : 64) + (tabBar ? tabBar.offsetHeight : 56) + 16;
+          const top = el.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      }, 100);
+    }
+  }
+</script>
 </body>
 </html>

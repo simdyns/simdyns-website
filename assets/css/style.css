@@ -608,6 +608,46 @@ section { padding: 72px 24px; }
   flex-shrink: 0;
 }
 
+/* ── SERVICE TABS ── */
+.service-tabs-bar {
+  background: var(--light-gray);
+  border-bottom: 1px solid var(--mid-gray);
+  position: sticky;
+  top: 64px;
+  z-index: 90;
+}
+.service-tabs {
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  padding: 12px 0;
+  scrollbar-width: none;
+}
+.service-tabs::-webkit-scrollbar { display: none; }
+.service-tab {
+  flex-shrink: 0;
+  padding: 8px 20px;
+  border-radius: 6px;
+  border: 1.5px solid transparent;
+  background: white;
+  color: var(--navy);
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: var(--font);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.service-tab:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+.service-tab.active {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: white;
+}
+
 /* ── SERVICE CARDS ── */
 .service-cards { display: flex; flex-direction: column; gap: 56px; }
 .service-card {
