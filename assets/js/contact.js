@@ -1,5 +1,7 @@
-const SUPABASE_URL = 'https://lndbejqsgxjexqbofcxv.supabase.co';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImxuZGJlanFzZ3hqZXhxYm9mY3h2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMxNjU1ODYsImV4cCI6MjA4ODc0MTU4Nn0.NFfiXV7ZV6fdwsIcnXFfFC7eWY8Do3Vs5BvzqVz1RFU';
+// Contact form — powered by Web3Forms
+// Access key tied to info@simdyns.com
+
+const WEB3FORMS_KEY = 'af1c598d-d27e-4daa-bfa6-ccd35db5e6a5';
 
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.querySelector('.contact-form form');
@@ -21,23 +23,31 @@ document.addEventListener('DOMContentLoaded', function () {
     submitBtn.textContent = 'Sending…';
 
     try {
-      const res = await fetch(`${SUPABASE_URL}/rest/v1/contact_submissions`, {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': SUPABASE_ANON_KEY,
-          'Authorization': `Bearer ${SUPABASE_ANON_KEY}`,
-          'Prefer': 'return=minimal'
+          'Accept': 'application/json'
         },
-        body: JSON.stringify({ name, email, subject, message })
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: subject || 'New contact form submission – SimDyns',
+          from_name: name,
+          replyto: email,
+          name,
+          email,
+          message
+        })
       });
 
-      if (res.ok || res.status === 201) {
+      const data = await res.json();
+
+      if (data.success === 'true' || data.success === true) {
         submitBtn.textContent = 'Message Sent ✓';
         submitBtn.style.background = '#16a34a';
         form.reset();
       } else {
-        throw new Error('Submission failed');
+        throw new Error(data.message || 'Submission failed');
       }
     } catch {
       submitBtn.disabled = false;

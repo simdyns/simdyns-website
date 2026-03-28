@@ -924,6 +924,7 @@ section { padding: 72px 24px; }
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;
+  align-items: stretch;
 }
 .contact-info ul { list-style: none; margin-top: 20px; }
 .contact-info ul li {
@@ -945,7 +946,10 @@ section { padding: 72px 24px; }
   font-size: 18px;
   flex-shrink: 0;
 }
-.contact-form { background: var(--light-gray); padding: 36px; border-radius: 12px; }
+.contact-form { background: var(--light-gray); padding: 36px; border-radius: 12px; display: flex; flex-direction: column; }
+.contact-form form { display: flex; flex-direction: column; flex: 1; }
+.contact-form .form-group:last-of-type { flex: 1; display: flex; flex-direction: column; }
+.contact-form .form-group:last-of-type textarea { flex: 1; min-height: 160px; }
 .contact-form h2 { margin-bottom: 8px; font-size: 1.5rem; color: var(--navy); }
 .contact-form .sub { color: var(--text-light); margin-bottom: 24px; font-size: .95rem; }
 .form-group { margin-bottom: 18px; }
