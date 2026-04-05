@@ -39,12 +39,103 @@
       </ul>
     </nav>
     <div class="lang-toggle">
-      <button class="lang-globe" id="lang-globe-btn" aria-label="Select language"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></button>
-      <div class="lang-dropdown" id="lang-dropdown">
-        <button class="lang-option" data-lang="en">English</button>
-        <button class="lang-option" data-lang="de">Deutsch</button>
-        <button class="lang-option" data-lang="da">Dansk</button>
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="da">DA</button>
+    </div>
+    <button id="menu-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="page-banner">
+  <h1 data-i18n="contact.banner">Contact</h1>
+</div>
+
+<section>
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Info + Map -->
+      <div class="contact-info" style="display:flex;flex-direction:column;gap:0;">
+        <h2 class="section-title" data-i18n="contact.info.title">Get in touch</h2>
+        <p style="margin-bottom:8px;" data-i18n="contact.info.text">Whether you have a specific project in mind or want to explore how SimDyns can support your goals, we'd love to hear from you. Reach us by email or phone — or simply fill in the form.</p>
+        <p style="margin-bottom:24px; color:var(--teal); font-weight:600;" data-i18n="contact.info.offer">We offer a complimentary two-hour consultation for new clients.</p>
+        <ul>
+          <li>
+            <div class="contact-icon">✉</div>
+            <div>
+              <strong data-i18n="contact.email">Email</strong><br>
+              <a href="mailto:info@simdyns.com">info@simdyns.com</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">📍</div>
+            <div>
+              <strong data-i18n="contact.address">Address</strong><br>
+              <span data-i18n="contact.address.val">Skjern, Denmark</span><br>
+              <a href="https://maps.app.goo.gl/M84USpv5acik5TKZ6" target="_blank" data-i18n="contact.directions">Get Directions</a>
+            </div>
+          </li>
+          <li style="display:block;padding:0;">
+            <div style="border-radius:10px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,0.12);line-height:0;margin:12px 0 4px;">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.409313678095!2d8.518627700000001!3d55.94227729999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464b9ed7efc26b47%3A0x7b8f3c910643807a!2sSimDyns%20Technology%20Solutions!5e0!3m2!1sda!2sdk!4v1774725598804!5m2!1sda!2sdk"
+                width="100%"
+                height="220"
+                style="border:0;display:block;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="SimDyns location – Skjern, Denmark">
+              </iframe>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">📞</div>
+            <div>
+              <strong data-i18n="contact.phone">Phone</strong><br>
+              <a href="tel:+4578886166">+45 78 88 61 66</a>
+            </div>
+          </li>
+          <li>
+            <div class="contact-icon">🔗</div>
+            <div>
+              <strong data-i18n="contact.follow">Follow Us</strong><br>
+              <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank">Facebook</a> &nbsp;|&nbsp;
+              <a href="https://www.linkedin.com/company/simdyns/" target="_blank">LinkedIn</a>
+            </div>
+          </li>
+        </ul>
+
       </div>
+
+      <!-- Form -->
+      <div class="contact-form">
+        <h2 data-i18n="contact.form.title">How Can We Help?</h2>
+        <p class="sub" data-i18n="contact.form.sub">We will refer you to one of our experts to give you the best advice for your project.</p>
+        <form>
+          <div class="form-group">
+            <label for="name"><span data-i18n="contact.form.name">Your Name</span> <span style="color:red">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" data-i18n-ph="contact.form.name.ph">
+          </div>
+          <div class="form-group">
+            <label for="email"><span data-i18n="contact.form.email">Your Email</span> <span style="color:red">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com" data-i18n-ph="contact.form.email.ph">
+          </div>
+          <div class="form-group">
+            <label for="subject" data-i18n="contact.form.subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" data-i18n-ph="contact.form.subject.ph">
+          </div>
+          <div class="form-group">
+            <label for="message" data-i18n="contact.form.message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project..." data-i18n-ph="contact.form.message.ph"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;border:none;cursor:pointer;" data-i18n="contact.form.send">Send Message</button>
+        </form>
+      </div>
+
     </div>
   </div>
 </section>
