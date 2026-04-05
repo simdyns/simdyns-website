@@ -48,13 +48,17 @@
     </a>
     <nav>
       <ul>
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../about/index.html">About</a></li>
-        <li><a href="../../services/index.html">Services</a></li>
-        <li><a href="../../publications/index.html" class="active">News</a></li>
-        <li><a href="../../contact/index.html">Contact</a></li>
+        <li><a href="../../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../../about/index.html" data-i18n="nav.about">About</a></li>
+        <li><a href="../../services/index.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="../../publications/index.html" class="active" data-i18n="nav.news.short">News</a></li>
+        <li><a href="../../contact/index.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button id="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -65,20 +69,20 @@
   <div class="container article-wrap">
     <article>
       <div class="article-meta">
-        <a href="../../publications/index.html">← Back to Latest News</a> &nbsp;·&nbsp; December 2024
+        <a href="../../publications/index.html" data-i18n="news.back">← Back to Latest News</a> &nbsp;·&nbsp; <span data-i18n="news.eug.meta">December 2024</span>
       </div>
 
-      <h1>SimDyns Technology Solutions Awarded EU Grant to Develop Energy Management Solutions for Industrial Applications</h1>
-      <h4>Energy Management Solutions</h4>
+      <h1 data-i18n="news.eug.h1">SimDyns Technology Solutions Awarded EU Grant to Develop Energy Management Solutions for Industrial Applications</h1>
+      <h4 data-i18n="news.eug.h4a">Energy Management Solutions</h4>
 
-      <p><strong>SimDyns Technology Solutions</strong> has been awarded the prestigious <strong>EU SeeBridge grant</strong> to develop a cutting-edge energy management solution. This initiative focuses on enhancing <strong>energy efficiency</strong> through advanced technologies and sustainable practices, aligning with the EU's commitment to achieving climate neutrality.</p>
+      <p data-i18n-html="news.eug.p1"><strong>SimDyns Technology Solutions</strong> has been awarded the prestigious <strong>EU SeeBridge grant</strong> to develop a cutting-edge energy management solution. This initiative focuses on enhancing <strong>energy efficiency</strong> through advanced technologies and sustainable practices, aligning with the EU's commitment to achieving climate neutrality.</p>
 
       <p>A key aspect of the project is the implementation of the <strong>ISO 50001 standard</strong>, which ensures high levels of energy performance and continuous improvement in energy management systems.</p>
 
       <p>SimDyns' innovative approach is expected to set new standards in energy management, significantly contributing to the EU's climate goals and sustainability objectives.</p>
 
       <div class="share-bar">
-        <h4>Share This Post</h4>
+        <h4 data-i18n="news.share">Share This Post</h4>
         <div class="share-btns">
           <a class="share-btn fb" href="https://www.facebook.com/sharer/sharer.php?u=https://simdyns.com/2018/03/08/simdyns-technology-solutions-awarded-eu-grant-to-develop-energy-management-solutions-for-industrial-applications/" target="_blank">Facebook</a>
           <a class="share-btn tw" href="https://x.com/intent/tweet?text=SimDyns+Technology+Solutions+Awarded+EU+Grant&url=https://simdyns.com/news/eu-grant/" target="_blank"><img src="../../assets/images/x-logo.svg" alt="X" style="width:14px;height:14px;vertical-align:middle;filter:invert(1);"></a>
@@ -98,47 +102,50 @@
   <div class="footer-main">
     <div class="footer-brand">
       <a href="../../index.html" class="logo">
-        <div class="logo-icon">SD</div>
-        <div class="logo-text"><span>SimDyns</span><span>Technology Solutions</span></div>
+        <img src="../../assets/images/logo.png" alt="SimDyns Logo" class="logo-img">
       </a>
-      <p>SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
+      <p data-i18n="footer.tagline">SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
       <p style="margin-top:10px; font-size:13px; opacity:.6;"><strong>CVR/VAT No. 44773481</strong></p>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4 data-i18n="footer.company">Company</h4>
       <ul>
-        <li><a href="../../about/index.html">About Us</a></li>
-        <li><a href="../../services/index.html">Our Services</a></li>
-        <li><a href="../../publications/index.html">Latest News</a></li>
-        <li><a href="../../contact/index.html">Contact</a></li>
+        <li><a href="../../about/index.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="../../services/index.html" data-i18n="footer.services">Our Services</a></li>
+        <li><a href="../../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../../publications/index.html" data-i18n="footer.news">Latest News</a></li>
+        <li><a href="../../contact/index.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4 data-i18n="footer.services.col">Services</h4>
       <ul>
-        <li><a href="../../services/index.html#cad">Computer Aided Design</a></li>
-        <li><a href="../../services/index.html#ems">Energy Management</a></li>
-        <li><a href="../../services/index.html#dtc">Deep Tech Training</a></li>
-        <li><a href="../../services/index.html#ipm">Innovation &amp; Project Management</a></li>
+        <li><a href="../../services/index.html#cad" data-i18n="footer.cad">Computer Aided Design</a></li>
+        <li><a href="../../services/index.html#ems" data-i18n="footer.ems">Energy Management</a></li>
+        <li><a href="../../services/index.html#dtc" data-i18n="footer.dtc">Deep Tech Training</a></li>
+        <li><a href="../../services/index.html#ipm" data-i18n="footer.ipm">Innovation &amp; Project Management</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Connect</h4>
+      <h4 data-i18n="footer.connect">Connect</h4>
       <ul>
         <li><a href="mailto:info@simdyns.com">info@simdyns.com</a></li>
         <li><a href="tel:+4578886166">+45 78 88 61 66</a></li>
+        <li><a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank">Facebook</a></li>
+        <li><a href="https://www.linkedin.com/company/simdyns/" target="_blank">LinkedIn</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
+    <span data-i18n="footer.copyright">© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
     <div class="social-links">
-      <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank">f</a>
-      <a href="https://www.linkedin.com/company/simdyns/" target="_blank">in</a>
+      <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank" title="Facebook">f</a>
+      <a href="https://www.linkedin.com/company/simdyns/" target="_blank" title="LinkedIn">in</a>
     </div>
   </div>
 </footer>
 
 <script src="../../assets/js/nav.js"></script>
+<script src="../../assets/js/i18n.js"></script>
 </body>
 </html>

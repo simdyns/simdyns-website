@@ -76,14 +76,18 @@
     </a>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/index.html" class="active">About</a></li>
-        <li><a href="../services/index.html">Services</a></li>
-        <li><a href="../cases/index.html">Cases</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../about/index.html" class="active" data-i18n="nav.about">About</a></li>
+        <li><a href="../services/index.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="nav.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button id="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -91,7 +95,7 @@
 </header>
 
 <div class="page-banner">
-  <h1>About</h1>
+  <h1 data-i18n="about.banner">About</h1>
 </div>
 
 <!-- ABOUT INTRO -->
@@ -99,13 +103,13 @@
   <div class="container">
     <div class="about-grid">
       <div>
-        <h2 class="section-title">Multidisciplinary Engineering Competences</h2>
-        <p style="margin-bottom:16px;">SimDyns specialises in energy management solutions fully compliant with ISO 50001 and ISO 50005 guidelines, working alongside organisations to build robust energy performance frameworks that deliver lasting cost savings and regulatory compliance. Our expert team brings international standards to practical implementation — whether that means commissioning an energy monitoring platform, redesigning a production process, or qualifying an organisation for certification.</p>
-        <p>Through targeted Deep Tech training curricula — covering computational simulation, embedded systems, AI applications, and advanced engineering principles — we empower clients across the energy, aerospace, automotive, industrial machinery, home appliances, and steel construction sectors to build in-house technological capabilities and achieve sustainable competitive advantages.</p>
+        <h2 class="section-title" data-i18n="about.comp.title">Multidisciplinary Engineering Competences</h2>
+        <p style="margin-bottom:16px;" data-i18n="about.comp.text1">SimDyns specialises in energy management solutions fully compliant with ISO 50001 and ISO 50005 guidelines, working alongside organisations to build robust energy performance frameworks that deliver lasting cost savings and regulatory compliance. Our expert team brings international standards to practical implementation — whether that means commissioning an energy monitoring platform, redesigning a production process, or qualifying an organisation for certification.</p>
+        <p data-i18n="about.comp.text2">Through targeted Deep Tech training curricula — covering computational simulation, embedded systems, AI applications, and advanced engineering principles — we empower clients across the energy, aerospace, automotive, industrial machinery, home appliances, and steel construction sectors to build in-house technological capabilities and achieve sustainable competitive advantages.</p>
       </div>
       <div>
-        <h2 class="section-title">Our Approach</h2>
-        <ul class="approach-list">
+        <h2 class="section-title" data-i18n="about.approach.title">Our Approach</h2>
+        <ul class="approach-list" data-i18n-html="about.approach.list">
           <li>High competences with competitive prices and commitment to deadlines.</li>
           <li>Lean process with predefined milestones and gateways.</li>
           <li>Quality mindset with a set of reviews processes and quality control and assurance.</li>
@@ -127,13 +131,13 @@
 <!-- TEAM -->
 <section style="background: var(--light-gray);">
   <div class="container">
-    <h2 class="section-title" style="text-align:center;">Meet Our Team</h2>
-    <p class="section-sub" style="text-align:center; margin:0 auto 40px;">A handpicked team of highly qualified engineers committed to multi-disciplinary excellence</p>
+    <h2 class="section-title" style="text-align:center;" data-i18n="about.team.title">Meet Our Team</h2>
+    <p class="section-sub" style="text-align:center; margin:0 auto 40px;" data-i18n="about.team.sub">A handpicked team of highly qualified engineers committed to multi-disciplinary excellence</p>
     <div class="team-grid">
       <div class="team-card">
         <h3>Islam Salah Elbahnasy</h3>
-        <p class="role">Managing Director</p>
-        <p>I hold an M.Sc in Aerospace Engineering and a Ph.D in Renewable Energy. My diverse engineering experience drives innovation in both fields. Committed to sustainable progress, I tackle complex challenges and deliver impactful solutions.</p>
+        <p class="role" data-i18n="about.islam.role">Managing Director</p>
+        <p data-i18n="about.islam.bio">I hold an M.Sc in Aerospace Engineering and a Ph.D in Renewable Energy. My diverse engineering experience drives innovation in both fields. Committed to sustainable progress, I tackle complex challenges and deliver impactful solutions.</p>
         <div class="team-links">
           <a href="//www.linkedin.com/in/islamelbahnasy/" target="_blank" title="LinkedIn">in</a>
           <a href="mailto:sa@simdyns.com" title="Email">✉</a>
@@ -141,8 +145,8 @@
       </div>
       <div class="team-card">
         <h3>Mahmoud Gabr</h3>
-        <p class="role">Development Manager</p>
-        <p>Experienced in business development within software and digital products, with expertise in statistical data analysis, CRM administration, market analysis, and SAP ERP. Mahmoud drives client engagement and ensures project delivery aligns with strategic and commercial objectives.</p>
+        <p class="role" data-i18n="about.mahmoud.role">Development Manager</p>
+        <p data-i18n="about.mahmoud.bio">Experienced in business development within software and digital products, with expertise in statistical data analysis, CRM administration, market analysis, and SAP ERP. Mahmoud drives client engagement and ensures project delivery aligns with strategic and commercial objectives.</p>
         <div class="team-links">
           <a href="//www.linkedin.com/in/mahmoud-mohamed-gabr/" target="_blank" title="LinkedIn">in</a>
           <a href="mailto:mg@simdyns.com" title="Email">✉</a>
@@ -150,8 +154,8 @@
       </div>
       <div class="team-card">
         <h3>Ibrahim Goda</h3>
-        <p class="role">Lead Engineer</p>
-        <p>Specialist in energy management and renewable energy systems, with hands-on experience delivering solar energy projects at scale. Ibrahim leads technical implementation and ensures solutions meet ISO 50001 performance standards, CBAM evaluation requirements, and client efficiency targets.</p>
+        <p class="role" data-i18n="about.ibrahim.role">Lead Engineer</p>
+        <p data-i18n="about.ibrahim.bio">Specialist in energy management and renewable energy systems, with hands-on experience delivering solar energy projects at scale. Ibrahim leads technical implementation and ensures solutions meet ISO 50001 performance standards, CBAM evaluation requirements, and client efficiency targets.</p>
         <div class="team-links">
           <a href="//www.linkedin.com/in/ibrahem-goda/" target="_blank" title="LinkedIn">in</a>
           <a href="mailto:ig@simdyns.com" title="Email">✉</a>
@@ -159,8 +163,8 @@
       </div>
       <div class="team-card">
         <h3>Mariem Elkholy</h3>
-        <p class="role">Development Engineer</p>
-        <p>Specialising in energy management, renewable systems, CBAM evaluation &amp; mentoring, and sustainable engineering solutions. Mariem combines analytical rigour with practical implementation expertise to help organisations reduce energy consumption and meet their sustainability commitments.</p>
+        <p class="role" data-i18n="about.mariem.role">Development Engineer</p>
+        <p data-i18n-html="about.mariem.bio">Specialising in energy management, renewable systems, CBAM evaluation &amp; mentoring, and sustainable engineering solutions. Mariem combines analytical rigour with practical implementation expertise to help organisations reduce energy consumption and meet their sustainability commitments.</p>
         <div class="team-links">
           <a href="//www.linkedin.com/in/mariem-elkholy/" target="_blank" title="LinkedIn">in</a>
           <a href="mailto:mk@simdyns.com" title="Email">✉</a>
@@ -172,9 +176,9 @@
 
 <!-- CTA -->
 <div class="cta-section">
-  <h2>Ready to Transform Your Engineering Challenge Into a Solution?</h2>
-  <p>We are a handpicked team of highly qualified engineers committed to multi-disciplinary excellence</p>
-  <a href="../contact/index.html" class="btn btn-outline">Contact Us</a>
+  <h2 data-i18n="about.cta.title">Ready to Transform Your Engineering Challenge Into a Solution?</h2>
+  <p data-i18n="about.cta.text">We are a handpicked team of highly qualified engineers committed to multi-disciplinary excellence</p>
+  <a href="../contact/index.html" class="btn btn-outline" data-i18n="btn.contact">Contact Us</a>
 </div>
 
 <footer>
@@ -183,29 +187,30 @@
       <a href="../index.html" class="logo">
         <img src="../assets/images/logo.png" alt="SimDyns Logo" class="logo-img">
       </a>
-      <p>SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
+      <p data-i18n="footer.tagline">SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
       <p style="margin-top:10px; font-size:13px; opacity:.6;"><strong>CVR/VAT No. 44773481</strong></p>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4 data-i18n="footer.company">Company</h4>
       <ul>
-        <li><a href="../about/index.html">About Us</a></li>
-        <li><a href="../services/index.html">Our Services</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../about/index.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="../services/index.html" data-i18n="footer.services">Our Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="footer.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4 data-i18n="footer.services.col">Services</h4>
       <ul>
-        <li><a href="../services/index.html#cad">Computer Aided Design</a></li>
-        <li><a href="../services/index.html#ems">Energy Management</a></li>
-        <li><a href="../services/index.html#dtc">Deep Tech Training</a></li>
-        <li><a href="../services/index.html#ipm">Innovation &amp; Project Management</a></li>
+        <li><a href="../services/index.html#cad" data-i18n="footer.cad">Computer Aided Design</a></li>
+        <li><a href="../services/index.html#ems" data-i18n="footer.ems">Energy Management</a></li>
+        <li><a href="../services/index.html#dtc" data-i18n="footer.dtc">Deep Tech Training</a></li>
+        <li><a href="../services/index.html#ipm" data-i18n="footer.ipm">Innovation &amp; Project Management</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Connect</h4>
+      <h4 data-i18n="footer.connect">Connect</h4>
       <ul>
         <li><a href="mailto:info@simdyns.com">info@simdyns.com</a></li>
         <li><a href="tel:+4578886166">+45 78 88 61 66</a></li>
@@ -215,14 +220,15 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
+    <span data-i18n="footer.copyright">© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
     <div class="social-links">
-      <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank">f</a>
-      <a href="https://www.linkedin.com/company/simdyns/" target="_blank">in</a>
+      <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank" title="Facebook">f</a>
+      <a href="https://www.linkedin.com/company/simdyns/" target="_blank" title="LinkedIn">in</a>
     </div>
   </div>
 </footer>
 
 <script src="../assets/js/nav.js"></script>
+<script src="../assets/js/i18n.js"></script>
 </body>
 </html>

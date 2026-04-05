@@ -1338,6 +1338,29 @@ footer {
   .team-grid { grid-template-columns: 1fr 1fr; }
   .footer-main { grid-template-columns: 1fr 1fr; }
 }
+/* ── LANGUAGE TOGGLE ── */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 12px;
+}
+.lang-btn {
+  background: none;
+  border: 1.5px solid var(--mid-gray);
+  color: var(--navy);
+  padding: 5px 11px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: background .2s, border-color .2s, color .2s;
+  font-family: inherit;
+}
+.lang-btn:hover { border-color: var(--teal); color: var(--teal); }
+.lang-btn.active { background: var(--teal); border-color: var(--teal); color: #fff; }
+
 /* ── MOBILE MENU TOGGLE ── */
 #menu-toggle {
   display: none;

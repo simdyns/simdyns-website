@@ -30,14 +30,18 @@
     </a>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/index.html">About</a></li>
-        <li><a href="../services/index.html">Services</a></li>
-        <li><a href="../cases/index.html">Cases</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html" class="active">Contact</a></li>
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../about/index.html" data-i18n="nav.about">About</a></li>
+        <li><a href="../services/index.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="nav.news">Latest News</a></li>
+        <li><a href="../contact/index.html" class="active" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button id="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -45,7 +49,7 @@
 </header>
 
 <div class="page-banner">
-  <h1>Contact</h1>
+  <h1 data-i18n="contact.banner">Contact</h1>
 </div>
 
 <section>
@@ -54,23 +58,23 @@
 
       <!-- Info + Map -->
       <div class="contact-info" style="display:flex;flex-direction:column;gap:0;">
-        <h2 class="section-title">Get in touch</h2>
-        <p style="margin-bottom:8px;">Whether you have a specific project in mind or want to explore how SimDyns can support your goals, we'd love to hear from you. Reach us by email or phone — or simply fill in the form.</p>
-        <p style="margin-bottom:24px; color:var(--teal); font-weight:600;">We offer a complimentary two-hour consultation for new clients.</p>
+        <h2 class="section-title" data-i18n="contact.info.title">Get in touch</h2>
+        <p style="margin-bottom:8px;" data-i18n="contact.info.text">Whether you have a specific project in mind or want to explore how SimDyns can support your goals, we'd love to hear from you. Reach us by email or phone — or simply fill in the form.</p>
+        <p style="margin-bottom:24px; color:var(--teal); font-weight:600;" data-i18n="contact.info.offer">We offer a complimentary two-hour consultation for new clients.</p>
         <ul>
           <li>
             <div class="contact-icon">✉</div>
             <div>
-              <strong>Email</strong><br>
+              <strong data-i18n="contact.email">Email</strong><br>
               <a href="mailto:info@simdyns.com">info@simdyns.com</a>
             </div>
           </li>
           <li>
             <div class="contact-icon">📍</div>
             <div>
-              <strong>Address</strong><br>
-              Skjern, Denmark<br>
-              <a href="https://maps.app.goo.gl/M84USpv5acik5TKZ6" target="_blank">Get Directions</a>
+              <strong data-i18n="contact.address">Address</strong><br>
+              <span data-i18n="contact.address.val">Skjern, Denmark</span><br>
+              <a href="https://maps.app.goo.gl/M84USpv5acik5TKZ6" target="_blank" data-i18n="contact.directions">Get Directions</a>
             </div>
           </li>
           <li style="display:block;padding:0;">
@@ -90,14 +94,14 @@
           <li>
             <div class="contact-icon">📞</div>
             <div>
-              <strong>Phone</strong><br>
+              <strong data-i18n="contact.phone">Phone</strong><br>
               <a href="tel:+4578886166">+45 78 88 61 66</a>
             </div>
           </li>
           <li>
             <div class="contact-icon">🔗</div>
             <div>
-              <strong>Follow Us</strong><br>
+              <strong data-i18n="contact.follow">Follow Us</strong><br>
               <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank">Facebook</a> &nbsp;|&nbsp;
               <a href="https://www.linkedin.com/company/simdyns/" target="_blank">LinkedIn</a>
             </div>
@@ -108,26 +112,26 @@
 
       <!-- Form -->
       <div class="contact-form">
-        <h2>How Can We Help?</h2>
-        <p class="sub">We will refer you to one of our experts to give you the best advice for your project.</p>
+        <h2 data-i18n="contact.form.title">How Can We Help?</h2>
+        <p class="sub" data-i18n="contact.form.sub">We will refer you to one of our experts to give you the best advice for your project.</p>
         <form>
           <div class="form-group">
-            <label for="name">Your Name <span style="color:red">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="John Doe">
+            <label for="name"><span data-i18n="contact.form.name">Your Name</span> <span style="color:red">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="John Doe" data-i18n-ph="contact.form.name.ph">
           </div>
           <div class="form-group">
-            <label for="email">Your Email <span style="color:red">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="john@example.com">
+            <label for="email"><span data-i18n="contact.form.email">Your Email</span> <span style="color:red">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="john@example.com" data-i18n-ph="contact.form.email.ph">
           </div>
           <div class="form-group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" placeholder="Project inquiry">
+            <label for="subject" data-i18n="contact.form.subject">Subject</label>
+            <input type="text" id="subject" name="subject" placeholder="Project inquiry" data-i18n-ph="contact.form.subject.ph">
           </div>
           <div class="form-group">
-            <label for="message">Your Message</label>
-            <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+            <label for="message" data-i18n="contact.form.message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Tell us about your project..." data-i18n-ph="contact.form.message.ph"></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" style="width:100%;border:none;cursor:pointer;">Send Message</button>
+          <button type="submit" class="btn btn-primary" style="width:100%;border:none;cursor:pointer;" data-i18n="contact.form.send">Send Message</button>
         </form>
       </div>
 
@@ -139,32 +143,32 @@
   <div class="footer-main">
     <div class="footer-brand">
       <a href="../index.html" class="logo">
-        <div class="logo-icon">SD</div>
-        <div class="logo-text"><span>SimDyns</span><span>Technology Solutions</span></div>
+        <img src="../assets/images/logo.png" alt="SimDyns Logo" class="logo-img">
       </a>
-      <p>SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
+      <p data-i18n="footer.tagline">SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
       <p style="margin-top:10px; font-size:13px; opacity:.6;"><strong>CVR/VAT No. 44773481</strong></p>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4 data-i18n="footer.company">Company</h4>
       <ul>
-        <li><a href="../about/index.html">About Us</a></li>
-        <li><a href="../services/index.html">Our Services</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../about/index.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="../services/index.html" data-i18n="footer.services">Our Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="footer.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4 data-i18n="footer.services.col">Services</h4>
       <ul>
-        <li><a href="../services/index.html#cad">Computer Aided Design</a></li>
-        <li><a href="../services/index.html#ems">Energy Management</a></li>
-        <li><a href="../services/index.html#dtc">Deep Tech Training</a></li>
-        <li><a href="../services/index.html#ipm">Innovation &amp; Project Management</a></li>
+        <li><a href="../services/index.html#cad" data-i18n="footer.cad">Computer Aided Design</a></li>
+        <li><a href="../services/index.html#ems" data-i18n="footer.ems">Energy Management</a></li>
+        <li><a href="../services/index.html#dtc" data-i18n="footer.dtc">Deep Tech Training</a></li>
+        <li><a href="../services/index.html#ipm" data-i18n="footer.ipm">Innovation &amp; Project Management</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Connect</h4>
+      <h4 data-i18n="footer.connect">Connect</h4>
       <ul>
         <li><a href="mailto:info@simdyns.com">info@simdyns.com</a></li>
         <li><a href="tel:+4578886166">+45 78 88 61 66</a></li>
@@ -174,15 +178,16 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
+    <span data-i18n="footer.copyright">© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
     <div class="social-links">
-      <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank">f</a>
-      <a href="https://www.linkedin.com/company/simdyns/" target="_blank">in</a>
+      <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank" title="Facebook">f</a>
+      <a href="https://www.linkedin.com/company/simdyns/" target="_blank" title="LinkedIn">in</a>
     </div>
   </div>
 </footer>
 
 <script src="../assets/js/nav.js"></script>
+<script src="../assets/js/i18n.js"></script>
 <script src="../assets/js/contact.js"></script>
 </body>
 </html>

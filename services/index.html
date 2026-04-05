@@ -85,14 +85,18 @@
     </a>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/index.html">About</a></li>
-        <li><a href="../services/index.html" class="active">Services</a></li>
-        <li><a href="../cases/index.html">Cases</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../about/index.html" data-i18n="nav.about">About</a></li>
+        <li><a href="../services/index.html" class="active" data-i18n="nav.services">Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="nav.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button id="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -100,18 +104,18 @@
 </header>
 
 <div class="page-banner">
-  <h1>Our Services</h1>
+  <h1 data-i18n="services.banner">Our Services</h1>
 </div>
 
 <!-- Service filter tabs -->
 <div class="service-tabs-bar">
   <div class="container">
     <div class="service-tabs">
-      <button class="service-tab active" data-target="all">All Services</button>
-      <button class="service-tab" data-target="cad">Computer Aided Design</button>
-      <button class="service-tab" data-target="ems">Energy Management</button>
-      <button class="service-tab" data-target="ipm">Innovation &amp; Project Management</button>
-      <button class="service-tab" data-target="dtc">Deep Tech Training</button>
+      <button class="service-tab active" data-target="all" data-i18n="services.tab.all">All Services</button>
+      <button class="service-tab" data-target="cad" data-i18n="services.tab.cad">Computer Aided Design</button>
+      <button class="service-tab" data-target="ems" data-i18n="services.tab.ems">Energy Management</button>
+      <button class="service-tab" data-target="ipm" data-i18n-html="services.tab.ipm">Innovation &amp; Project Management</button>
+      <button class="service-tab" data-target="dtc" data-i18n="services.tab.dtc">Deep Tech Training</button>
     </div>
   </div>
 </div>
@@ -123,9 +127,9 @@
       <!-- Service 1: CAD -->
       <div class="service-card" id="cad">
         <div class="service-text">
-          <h2>Computer Aided Design</h2>
-          <p style="color:var(--teal); font-weight:600; margin-bottom:16px;">From concept to certified design — faster.</p>
-          <ul>
+          <h2 data-i18n="services.cad.title">Computer Aided Design</h2>
+          <p style="color:var(--teal); font-weight:600; margin-bottom:16px;" data-i18n="services.cad.sub">From concept to certified design — faster.</p>
+          <ul data-i18n-html="services.cad.list">
             <li>Addressing the product lifecycle through expertise in collaborative design, value engineering, reverse engineering, and product redesign for developing designs for manufacturing from concept to detailed fabrication drawings.</li>
             <li>Creating detailed 3D models for mechanical parts and assemblies using (SOLIDWORKS, INVENTOR, NX, CATIA)</li>
             <li>Generating detailed parts, assemblies, and installations drawings, complying with appropriate codes and standards.</li>
@@ -140,9 +144,9 @@
       <!-- Service 4: Energy Management -->
       <div class="service-card reverse" id="ems">
         <div class="service-text">
-          <h2>Energy Management Solutions</h2>
-          <p style="color:var(--teal); font-weight:600; margin-bottom:16px;">Advanced energy management systems — monitoring, optimisation, and performance at scale.</p>
-          <ul>
+          <h2 data-i18n="services.ems.title">Energy Management Solutions</h2>
+          <p style="color:var(--teal); font-weight:600; margin-bottom:16px;" data-i18n="services.ems.sub">Advanced energy management systems — monitoring, optimisation, and performance at scale.</p>
+          <ul data-i18n-html="services.ems.list">
             <li><strong>Significant Energy Use (SEU) Definition:</strong> Identify and manage the energy sources and systems that have the greatest impact on your organisation's total energy consumption.</li>
             <li><strong>Energy Performance Indicators (EnPI):</strong> Develop and monitor quantitative indicators to assess and track improvements in energy efficiency over time.</li>
             <li><strong>Monitoring Platform:</strong> Develop web-based and desktop applications for comprehensive energy monitoring, management, and control.</li>
@@ -160,9 +164,9 @@
       <!-- Service 5: Innovation Management -->
       <div class="service-card" id="ipm">
         <div class="service-text">
-          <h2>Innovation &amp; Project Management</h2>
-          <p style="color:var(--teal); font-weight:600; margin-bottom:16px;">Turn strategic intent into a structured innovation programme that delivers return on investment.</p>
-          <ul>
+          <h2 data-i18n-html="services.ipm.title">Innovation &amp; Project Management</h2>
+          <p style="color:var(--teal); font-weight:600; margin-bottom:16px;" data-i18n="services.ipm.sub">Turn strategic intent into a structured innovation programme that delivers return on investment.</p>
+          <ul data-i18n-html="services.ipm.list">
             <li>Generating an accurate and relevant technology roadmap for client's business.</li>
             <li>Accelerate problem-solving with a cross‑industry perspective.</li>
             <li>Improve your functions' and companies' performance and productivity.</li>
@@ -178,9 +182,9 @@
       <!-- Service 6: Deep Tech -->
       <div class="service-card reverse" id="dtc">
         <div class="service-text">
-          <h2>Deep Tech Courses and Training</h2>
-          <p style="color:var(--teal); font-weight:600; margin-bottom:16px;">Build lasting in-house capability with hands-on training engineered around your team's goals.</p>
-          <ul>
+          <h2 data-i18n="services.dtc.title">Deep Tech Courses and Training</h2>
+          <p style="color:var(--teal); font-weight:600; margin-bottom:16px;" data-i18n="services.dtc.sub">Build lasting in-house capability with hands-on training engineered around your team's goals.</p>
+          <ul data-i18n-html="services.dtc.list">
             <li>Unlock your potential with SimDyns Technology Solutions' Deep Tech Training.</li>
             <li>Immerse yourself in hands-on learning with AI, simulation, and dynamic system design.</li>
             <li>Enhance aerospace systems with our innovative approaches.</li>
@@ -199,9 +203,9 @@
 
 <!-- CTA -->
 <div class="cta-section">
-  <h2>Dynamic Simulation and Smart Engineering Solutions</h2>
-  <p>We are a handpicked team of highly qualified engineers committed to multi-disciplinary excellence</p>
-  <a href="../contact/index.html" class="btn btn-outline">Contact Us</a>
+  <h2 data-i18n="services.cta.title">Dynamic Simulation and Smart Engineering Solutions</h2>
+  <p data-i18n="services.cta.text">We are a handpicked team of highly qualified engineers committed to multi-disciplinary excellence</p>
+  <a href="../contact/index.html" class="btn btn-outline" data-i18n="btn.contact">Contact Us</a>
 </div>
 
 <footer>
@@ -210,28 +214,30 @@
       <a href="../index.html" class="logo">
         <img src="../assets/images/logo.png" alt="SimDyns Logo" class="logo-img">
       </a>
-      <p>SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
+      <p data-i18n="footer.tagline">SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
       <p style="margin-top:10px; font-size:13px; opacity:.6;"><strong>CVR/VAT No. 44773481</strong></p>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4 data-i18n="footer.company">Company</h4>
       <ul>
-        <li><a href="../about/index.html">About Us</a></li>
-        <li><a href="../services/index.html">Our Services</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../about/index.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="../services/index.html" data-i18n="footer.services">Our Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="footer.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4 data-i18n="footer.services.col">Services</h4>
       <ul>
-        <li><a href="#cad">Computer Aided Design</a></li>
-        <li><a href="#ems">Energy Management</a></li>
-        <li><a href="#dtc">Deep Tech Training</a></li>
+        <li><a href="#cad" data-i18n="footer.cad">Computer Aided Design</a></li>
+        <li><a href="#ems" data-i18n="footer.ems">Energy Management</a></li>
+        <li><a href="#dtc" data-i18n="footer.dtc">Deep Tech Training</a></li>
+        <li><a href="#ipm" data-i18n="footer.ipm">Innovation &amp; Project Management</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Connect</h4>
+      <h4 data-i18n="footer.connect">Connect</h4>
       <ul>
         <li><a href="mailto:info@simdyns.com">info@simdyns.com</a></li>
         <li><a href="tel:+4578886166">+45 78 88 61 66</a></li>
@@ -241,15 +247,16 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
+    <span data-i18n="footer.copyright">© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
     <div class="social-links">
-      <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank">f</a>
-      <a href="https://www.linkedin.com/company/simdyns/" target="_blank">in</a>
+      <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank" title="Facebook">f</a>
+      <a href="https://www.linkedin.com/company/simdyns/" target="_blank" title="LinkedIn">in</a>
     </div>
   </div>
 </footer>
 
 <script src="../assets/js/nav.js"></script>
+<script src="../assets/js/i18n.js"></script>
 <script>
   const tabs = document.querySelectorAll('.service-tab');
   const cards = document.querySelectorAll('.service-card');

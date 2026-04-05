@@ -30,14 +30,18 @@
     </a>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/index.html">About</a></li>
-        <li><a href="../services/index.html">Services</a></li>
-        <li><a href="../cases/index.html">Cases</a></li>
-        <li><a href="../publications/index.html" class="active">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../about/index.html" data-i18n="nav.about">About</a></li>
+        <li><a href="../services/index.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" class="active" data-i18n="nav.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button id="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -45,53 +49,53 @@
 </header>
 
 <div class="page-banner">
-  <h1>Latest News</h1>
+  <h1 data-i18n="pubs.banner">Latest News</h1>
 </div>
 
 <section>
   <div class="container">
-    <h2 class="section-title">Latest News</h2>
-    <p style="margin-bottom:40px; max-width:800px;">SimDyns shares updates on our projects, partnerships, and programmes across <strong>energy management, aerospace, cybersecurity, and deep tech training</strong>. These articles document our work and the milestones we have reached alongside our clients and partners.</p>
+    <h2 class="section-title" data-i18n="pubs.title">Latest News</h2>
+    <p style="margin-bottom:40px; max-width:800px;" data-i18n-html="pubs.intro">SimDyns shares updates on our projects, partnerships, and programmes across <strong>energy management, aerospace, cybersecurity, and deep tech training</strong>. These articles document our work and the milestones we have reached alongside our clients and partners.</p>
 
     <div class="pub-grid">
       <div class="pub-card">
         <div class="pub-num">1</div>
         <div>
-          <span class="tag">Energy Management</span>
-          <h3><a href="../news/energy-platform-launch/index.html">SimDyns Launches Updated Energy Management Platform with Enhanced Monitoring and Analytics</a></h3>
-          <p style="font-size:13px; color:var(--text-light); margin-top:6px;">March 2026</p>
+          <span class="tag" data-i18n="pubs.p1.tag">Energy Management</span>
+          <h3><a href="../news/energy-platform-launch/index.html" data-i18n="pubs.p1.title">SimDyns Launches Updated Energy Management Platform with Enhanced Monitoring and Analytics</a></h3>
+          <p style="font-size:13px; color:var(--text-light); margin-top:6px;" data-i18n="pubs.p1.date">March 2026</p>
         </div>
       </div>
       <div class="pub-card">
         <div class="pub-num">2</div>
         <div>
-          <span class="tag">Horizon Europe</span>
-          <h3><a href="../news/horizon-europe-2026/index.html">SimDyns Joins Horizon Europe 2026 Consortium to Expand Cross-Border Investment Ecosystems</a></h3>
-          <p style="font-size:13px; color:var(--text-light); margin-top:6px;">January 2026</p>
+          <span class="tag" data-i18n="pubs.p2.tag">Horizon Europe</span>
+          <h3><a href="../news/horizon-europe-2026/index.html" data-i18n="pubs.p2.title">SimDyns Joins Horizon Europe 2026 Consortium to Expand Cross-Border Investment Ecosystems</a></h3>
+          <p style="font-size:13px; color:var(--text-light); margin-top:6px;" data-i18n="pubs.p2.date">January 2026</p>
         </div>
       </div>
       <div class="pub-card">
         <div class="pub-num">3</div>
         <div>
-          <span class="tag">Training &amp; Space Tech</span>
-          <h3><a href="../news/cubesat-training/index.html">SimDyns Launches CubeSat and Computer Vision Training Program in Partnership with Creativa Egypt</a></h3>
-          <p style="font-size:13px; color:var(--text-light); margin-top:6px;">March 2025</p>
+          <span class="tag" data-i18n="pubs.p3.tag">Training &amp; Space Tech</span>
+          <h3><a href="../news/cubesat-training/index.html" data-i18n="pubs.p3.title">SimDyns Launches CubeSat and Computer Vision Training Program in Partnership with Creativa Egypt</a></h3>
+          <p style="font-size:13px; color:var(--text-light); margin-top:6px;" data-i18n="pubs.p3.date">March 2025</p>
         </div>
       </div>
       <div class="pub-card">
         <div class="pub-num">4</div>
         <div>
-          <span class="tag">Energy Management</span>
-          <h3><a href="../news/eu-grant/index.html">SimDyns Technology Solutions Awarded EU Grant to Develop Energy Management Solutions for Industrial Applications</a></h3>
-          <p style="font-size:13px; color:var(--text-light); margin-top:6px;">December 2024</p>
+          <span class="tag" data-i18n="pubs.p4.tag">Energy Management</span>
+          <h3><a href="../news/eu-grant/index.html" data-i18n="pubs.p4.title">SimDyns Technology Solutions Awarded EU Grant to Develop Energy Management Solutions for Industrial Applications</a></h3>
+          <p style="font-size:13px; color:var(--text-light); margin-top:6px;" data-i18n="pubs.p4.date">December 2024</p>
         </div>
       </div>
       <div class="pub-card">
         <div class="pub-num">5</div>
         <div>
-          <span class="tag">Cybersecurity &amp; AI</span>
-          <h3><a href="../news/cybersecurity-training/index.html">SimDyns Launches AI-Powered Cybersecurity Training Program Aligned with EIT Deep Tech Goals</a></h3>
-          <p style="font-size:13px; color:var(--text-light); margin-top:6px;">May 2024</p>
+          <span class="tag" data-i18n="pubs.p5.tag">Cybersecurity &amp; AI</span>
+          <h3><a href="../news/cybersecurity-training/index.html" data-i18n="pubs.p5.title">SimDyns Launches AI-Powered Cybersecurity Training Program Aligned with EIT Deep Tech Goals</a></h3>
+          <p style="font-size:13px; color:var(--text-light); margin-top:6px;" data-i18n="pubs.p5.date">May 2024</p>
         </div>
       </div>
     </div>
@@ -105,29 +109,30 @@
         <div class="logo-icon">SD</div>
         <div class="logo-text"><span>SimDyns</span><span>Technology Solutions</span></div>
       </a>
-      <p>SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
+      <p data-i18n="footer.tagline">SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
       <p style="margin-top:10px; font-size:13px; opacity:.6;"><strong>CVR/VAT No. 44773481</strong></p>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4 data-i18n="footer.company">Company</h4>
       <ul>
-        <li><a href="../about/index.html">About Us</a></li>
-        <li><a href="../services/index.html">Our Services</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../about/index.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="../services/index.html" data-i18n="footer.services">Our Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="footer.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4 data-i18n="footer.services.col">Services</h4>
       <ul>
-        <li><a href="../services/index.html#cad">Computer Aided Design</a></li>
-        <li><a href="../services/index.html#ems">Energy Management</a></li>
-        <li><a href="../services/index.html#dtc">Deep Tech Training</a></li>
-        <li><a href="../services/index.html#ipm">Innovation &amp; Project Management</a></li>
+        <li><a href="../services/index.html#cad" data-i18n="footer.cad">Computer Aided Design</a></li>
+        <li><a href="../services/index.html#ems" data-i18n="footer.ems">Energy Management</a></li>
+        <li><a href="../services/index.html#dtc" data-i18n="footer.dtc">Deep Tech Training</a></li>
+        <li><a href="../services/index.html#ipm" data-i18n="footer.ipm">Innovation &amp; Project Management</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Connect</h4>
+      <h4 data-i18n="footer.connect">Connect</h4>
       <ul>
         <li><a href="mailto:info@simdyns.com">info@simdyns.com</a></li>
         <li><a href="tel:+4578886166">+45 78 88 61 66</a></li>
@@ -137,7 +142,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
+    <span data-i18n="footer.copyright">© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
     <div class="social-links">
       <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank">f</a>
       <a href="https://www.linkedin.com/company/simdyns/" target="_blank">in</a>
@@ -146,5 +151,6 @@
 </footer>
 
 <script src="../assets/js/nav.js"></script>
+<script src="../assets/js/i18n.js"></script>
 </body>
 </html>

@@ -30,14 +30,18 @@
     </a>
     <nav>
       <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about/index.html">About</a></li>
-        <li><a href="../services/index.html">Services</a></li>
-        <li><a href="../cases/index.html" class="active">Cases</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="../about/index.html" data-i18n="nav.about">About</a></li>
+        <li><a href="../services/index.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="../cases/index.html" class="active" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="nav.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button id="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -47,8 +51,8 @@
 <!-- PAGE BANNER -->
 <div class="page-banner">
   <div class="page-banner-inner">
-    <h1>Cases</h1>
-    <p>Real projects. Measurable results. Delivered across industry sectors worldwide.</p>
+    <h1 data-i18n="cases.banner">Cases</h1>
+    <p data-i18n="cases.banner.sub">Real projects. Measurable results. Delivered across industry sectors worldwide.</p>
   </div>
 </div>
 
@@ -56,11 +60,11 @@
 <section style="background:var(--white); padding:36px 24px 0;">
   <div class="container">
     <div class="case-filters" id="caseFilters">
-      <button class="case-filter active" data-filter="all">All Projects</button>
-      <button class="case-filter" data-filter="energy">Energy Management</button>
-      <button class="case-filter" data-filter="engineering">Engineering</button>
-      <button class="case-filter" data-filter="training">Deep Tech Training</button>
-      <button class="case-filter" data-filter="tooling">Tooling</button>
+      <button class="case-filter active" data-filter="all" data-i18n="cases.filter.all">All Projects</button>
+      <button class="case-filter" data-filter="energy" data-i18n="cases.filter.energy">Energy Management</button>
+      <button class="case-filter" data-filter="engineering" data-i18n="cases.filter.engineering">Engineering</button>
+      <button class="case-filter" data-filter="training" data-i18n="cases.filter.training">Deep Tech Training</button>
+      <button class="case-filter" data-filter="tooling" data-i18n="cases.filter.tooling">Tooling</button>
     </div>
   </div>
 </section>
@@ -81,12 +85,12 @@
             <span class="tag">Energy Management</span>
             <span class="case-year">2024–2025</span>
           </div>
-          <h3>Energy Management Solution Development</h3>
-          <p class="case-client">SeeBridge EU Funded Program &amp; IMMIB — EU / Turkey</p>
-          <p>Design and implementation of an advanced energy management system for plant and utility-scale operations, implementing ISO 50001 standards. Awarded under the EU SeeBridge grant, focusing on energy efficiency through advanced simulation and process optimisation.</p>
+          <h3 data-i18n="cases.c1.title">Energy Management Solution Development</h3>
+          <p class="case-client" data-i18n-html="cases.c1.client">SeeBridge EU Funded Program &amp; IMMIB — EU / Turkey</p>
+          <p data-i18n="cases.c1.desc">Design and implementation of an advanced energy management system for plant and utility-scale operations, implementing ISO 50001 standards. Awarded under the EU SeeBridge grant, focusing on energy efficiency through advanced simulation and process optimisation.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c1.list">
               <li>Advanced simulation platform modelling energy usage and forecasting emissions</li>
               <li>Process optimisation to reduce energy waste and improve efficiency</li>
               <li>Strategic partnerships for collaborative sustainability innovation</li>
@@ -104,15 +108,15 @@
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="tag">Deep Tech Training</span>
+            <span class="tag" data-i18n="cases.c2.tag">Deep Tech Training</span>
             <span class="case-year">2025</span>
           </div>
-          <h3>CubeSat and Computer Vision Applications</h3>
-          <p class="case-client">Creativa Egypt — Egypt</p>
-          <p>Training programme integrating computer vision techniques in CubeSat missions for space-based imaging, object detection, and data analysis. Participants deploy AI-driven vision systems for Earth observation and autonomous satellite operations.</p>
+          <h3 data-i18n="cases.c2.title">CubeSat and Computer Vision Applications</h3>
+          <p class="case-client" data-i18n="cases.c2.client">Creativa Egypt — Egypt</p>
+          <p data-i18n="cases.c2.desc">Training programme integrating computer vision techniques in CubeSat missions for space-based imaging, object detection, and data analysis. Participants deploy AI-driven vision systems for Earth observation and autonomous satellite operations.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c2.list">
               <li>EQF Level 3-aligned curriculum for AI-driven computer vision in CubeSat missions</li>
               <li>Interactive multimedia platform with hands-on simulations</li>
               <li>Live Q&amp;A, discussion forums, and personalised learner support</li>
@@ -129,15 +133,15 @@
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="tag">Deep Tech Training</span>
+            <span class="tag" data-i18n="cases.c3.tag">Deep Tech Training</span>
             <span class="case-year">2024–2025</span>
           </div>
-          <h3>AI-Powered Cybersecurity Training Programme</h3>
-          <p class="case-client">EIT Deep Tech (OctaInsight Norway / Kiev Academic University) — EU</p>
-          <p>Programme equipping the European workforce with advanced AI-driven cybersecurity skills, enhancing digital resilience — contributing to training 1 million EU residents in deep tech fields by end of 2025.</p>
+          <h3 data-i18n="cases.c3.title">AI-Powered Cybersecurity Training Programme</h3>
+          <p class="case-client" data-i18n="cases.c3.client">EIT Deep Tech (OctaInsight Norway / Kiev Academic University) — EU</p>
+          <p data-i18n="cases.c3.desc">Programme equipping the European workforce with advanced AI-driven cybersecurity skills, enhancing digital resilience — contributing to training 1 million EU residents in deep tech fields by end of 2025.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c3.list">
               <li>Inclusive EQF Level 3-aligned curriculum for AI-powered cybersecurity</li>
               <li>Multimedia platform with live Q&amp;A and targeted outreach</li>
               <li>Certification and quantitative impact measurement</li>
@@ -153,15 +157,15 @@
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="tag">Tooling Development</span>
+            <span class="tag" data-i18n="cases.c4.tag">Tooling Development</span>
             <span class="case-year">2015 &amp; 2022</span>
           </div>
-          <h3>Gripper Modification for Press Automation Transfer Arm</h3>
-          <p class="case-client">Electrolux — Gas Cookers Factory, Egypt</p>
-          <p>Redesign, fabrication, and delivery of a modified gripper for a press-automation transfer arm. A programme of three repeated projects across two phases at an Electrolux manufacturing facility.</p>
+          <h3 data-i18n="cases.c4.title">Gripper Modification for Press Automation Transfer Arm</h3>
+          <p class="case-client" data-i18n="cases.c4.client">Electrolux — Gas Cookers Factory, Egypt</p>
+          <p data-i18n="cases.c4.desc">Redesign, fabrication, and delivery of a modified gripper for a press-automation transfer arm. A programme of three repeated projects across two phases at an Electrolux manufacturing facility.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c4.list">
               <li>Reverse engineering and redesign based on updated operational requirements</li>
               <li>Full fabrication management of all tooling in scope</li>
               <li>Factory acceptance testing and final delivery</li>
@@ -177,15 +181,15 @@
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="tag">Engineering Analysis</span>
+            <span class="tag" data-i18n="cases.c5.tag">Engineering Analysis</span>
             <span class="case-year">2021</span>
           </div>
-          <h3>Modified Drive Train Torsional Analysis</h3>
-          <p class="case-client">Turbine Efficiency — United Kingdom</p>
-          <p>Torsional vibration analysis of a modified combined drive train of a Siemens SGT-100-1S Gas Turbine, performed in accordance with API Recommended Practice for Packaged Gas Turbines.</p>
+          <h3 data-i18n="cases.c5.title">Modified Drive Train Torsional Analysis</h3>
+          <p class="case-client" data-i18n="cases.c5.client">Turbine Efficiency — United Kingdom</p>
+          <p data-i18n="cases.c5.desc">Torsional vibration analysis of a modified combined drive train of a Siemens SGT-100-1S Gas Turbine, performed in accordance with API Recommended Practice for Packaged Gas Turbines.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c5.list">
               <li>Computerised analysis of undamped torsional resonances and critical speeds</li>
               <li>Campbell Diagram with critical speed plots and excitation mapping</li>
               <li>Technical report with conclusions per API norms</li>
@@ -201,15 +205,15 @@
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="tag">Product Development</span>
+            <span class="tag" data-i18n="cases.c6.tag">Product Development</span>
             <span class="case-year">2023</span>
           </div>
-          <h3>Drone-Systems Aeronautical Engineering Consultancy</h3>
-          <p class="case-client">Inkonova AB — Sweden</p>
-          <p>Engineering services outsourcing for commercial drone system development, focused on the mining and underground industrial sector — delivered under a long-term Engineering Services Outsourcing Contract.</p>
+          <h3 data-i18n="cases.c6.title">Drone-Systems Aeronautical Engineering Consultancy</h3>
+          <p class="case-client" data-i18n="cases.c6.client">Inkonova AB — Sweden</p>
+          <p data-i18n="cases.c6.desc">Engineering services outsourcing for commercial drone system development, focused on the mining and underground industrial sector — delivered under a long-term Engineering Services Outsourcing Contract.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c6.list">
               <li>Detail design of structural, electro-mechanical, and payload components</li>
               <li>Flight control and power hardware integration</li>
               <li>Stress analysis, prototype development, and design verification testing</li>
@@ -226,15 +230,15 @@
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="tag">Systems Integration</span>
+            <span class="tag" data-i18n="cases.c7.tag">Systems Integration</span>
             <span class="case-year">2013–2014 &amp; 2022–2024</span>
           </div>
-          <h3>Production Cell Automation — Gantry System</h3>
-          <p class="case-client">Asfour Crystal International — Egypt</p>
-          <p>Fully automated loading and unloading system for crystal processing machines. Five integrated sub-projects across two phases — a decade-long engineering partnership delivering measurable productivity improvements.</p>
+          <h3 data-i18n="cases.c7.title">Production Cell Automation — Gantry System</h3>
+          <p class="case-client" data-i18n="cases.c7.client">Asfour Crystal International — Egypt</p>
+          <p data-i18n="cases.c7.desc">Fully automated loading and unloading system for crystal processing machines. Five integrated sub-projects across two phases — a decade-long engineering partnership delivering measurable productivity improvements.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c7.list">
               <li>Production cell layout redesign and motion time study optimisation</li>
               <li>Turntable/turnstyle machine design for automatic handling</li>
               <li>Novel inverting machine design, fabrication, and integration</li>
@@ -251,15 +255,15 @@
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="tag">Tooling Development</span>
+            <span class="tag" data-i18n="cases.c8.tag">Tooling Development</span>
             <span class="case-year">2023–2025</span>
           </div>
-          <h3>Tooling Development for Precise Manufacturing</h3>
-          <p class="case-client">Maadi Company for Engineering Industries (Ministry of Military Production) — Egypt</p>
-          <p>Design review and fabrication management of 34 jigs and fixtures for precision manufacturing. A programme of 28 repeated projects delivering rigorous tooling quality standards.</p>
+          <h3 data-i18n="cases.c8.title">Tooling Development for Precise Manufacturing</h3>
+          <p class="case-client" data-i18n="cases.c8.client">Maadi Company for Engineering Industries (Ministry of Military Production) — Egypt</p>
+          <p data-i18n="cases.c8.desc">Design review and fabrication management of 34 jigs and fixtures for precision manufacturing. A programme of 28 repeated projects delivering rigorous tooling quality standards.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c8.list">
               <li>Technical review and approval of all jig and fixture designs</li>
               <li>Full fabrication process management for all tooling in scope</li>
             </ul>
@@ -274,15 +278,15 @@
         </div>
         <div class="case-body">
           <div class="case-meta">
-            <span class="tag">Product Development</span>
+            <span class="tag" data-i18n="cases.c9.tag">Product Development</span>
             <span class="case-year">2022–2024</span>
           </div>
-          <h3>Redesign of Nozzle for Dust Control Equipment</h3>
-          <p class="case-client">ASEC Environmental Protection (ASENPRO) — Egypt</p>
-          <p>Material substitution from die-cast aluminium to Fiberglass Reinforced Polyamide via injection moulding — achieving significant cost reduction without compromising performance.</p>
+          <h3 data-i18n="cases.c9.title">Redesign of Nozzle for Dust Control Equipment</h3>
+          <p class="case-client" data-i18n="cases.c9.client">ASEC Environmental Protection (ASENPRO) — Egypt</p>
+          <p data-i18n="cases.c9.desc">Material substitution from die-cast aluminium to Fiberglass Reinforced Polyamide via injection moulding — achieving significant cost reduction without compromising performance.</p>
           <div class="case-activities">
-            <h4>Key Activities</h4>
-            <ul>
+            <h4 data-i18n="cases.activities">Key Activities</h4>
+            <ul data-i18n-html="cases.c9.list">
               <li>Geometrical characterisation from original metallic sample</li>
               <li>Material selection, design drawings, and verification documentation</li>
               <li>Injection mould tooling fabrication and full production operations</li>
@@ -298,9 +302,9 @@
 
 <!-- CTA -->
 <div class="cta-section">
-  <h2>Have a Project in Mind?</h2>
-  <p>Tell us about your challenge and let's engineer a solution together.</p>
-  <a href="../contact/index.html" class="btn btn-outline">Contact Us</a>
+  <h2 data-i18n="cases.cta.title">Have a Project in Mind?</h2>
+  <p data-i18n="cases.cta.text">Tell us about your challenge and let's engineer a solution together.</p>
+  <a href="../contact/index.html" class="btn btn-outline" data-i18n="btn.contact">Contact Us</a>
 </div>
 
 <!-- FOOTER -->
@@ -310,30 +314,30 @@
       <a href="../index.html" class="logo">
         <img src="../assets/images/logo.png" alt="SimDyns Logo" class="logo-img">
       </a>
-      <p>SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
+      <p data-i18n="footer.tagline">SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
       <p style="margin-top:10px; font-size:13px; opacity:.6;"><strong>CVR/VAT No. 44773481</strong></p>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4 data-i18n="footer.company">Company</h4>
       <ul>
-        <li><a href="../about/index.html">About Us</a></li>
-        <li><a href="../services/index.html">Our Services</a></li>
-        <li><a href="../cases/index.html">Cases</a></li>
-        <li><a href="../publications/index.html">Latest News</a></li>
-        <li><a href="../contact/index.html">Contact</a></li>
+        <li><a href="../about/index.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="../services/index.html" data-i18n="footer.services">Our Services</a></li>
+        <li><a href="../cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="../publications/index.html" data-i18n="footer.news">Latest News</a></li>
+        <li><a href="../contact/index.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4 data-i18n="footer.services.col">Services</h4>
       <ul>
-        <li><a href="../services/index.html#cad">Computer Aided Design</a></li>
-        <li><a href="../services/index.html#ems">Energy Management</a></li>
-        <li><a href="../services/index.html#dtc">Deep Tech Training</a></li>
-        <li><a href="../services/index.html#ipm">Innovation &amp; Project Management</a></li>
+        <li><a href="../services/index.html#cad" data-i18n="footer.cad">Computer Aided Design</a></li>
+        <li><a href="../services/index.html#ems" data-i18n="footer.ems">Energy Management</a></li>
+        <li><a href="../services/index.html#dtc" data-i18n="footer.dtc">Deep Tech Training</a></li>
+        <li><a href="../services/index.html#ipm" data-i18n="footer.ipm">Innovation &amp; Project Management</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Connect</h4>
+      <h4 data-i18n="footer.connect">Connect</h4>
       <ul>
         <li><a href="mailto:info@simdyns.com">info@simdyns.com</a></li>
         <li><a href="tel:+4578886166">+45 78 88 61 66</a></li>
@@ -343,7 +347,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
+    <span data-i18n="footer.copyright">© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
     <div class="social-links">
       <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank" title="Facebook">f</a>
       <a href="https://www.linkedin.com/company/simdyns/" target="_blank" title="LinkedIn">in</a>
@@ -352,6 +356,7 @@
 </footer>
 
 <script src="../assets/js/nav.js"></script>
+<script src="../assets/js/i18n.js"></script>
 <script>
   const filters = document.querySelectorAll('.case-filter');
   const cards = document.querySelectorAll('.case-card');

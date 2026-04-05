@@ -61,14 +61,18 @@
     </a>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about/index.html">About</a></li>
-        <li><a href="services/index.html">Services</a></li>
-        <li><a href="cases/index.html">Cases</a></li>
-        <li><a href="publications/index.html">Latest News</a></li>
-        <li><a href="contact/index.html">Contact</a></li>
+        <li><a href="index.html" class="active" data-i18n="nav.home">Home</a></li>
+        <li><a href="about/index.html" data-i18n="nav.about">About</a></li>
+        <li><a href="services/index.html" data-i18n="nav.services">Services</a></li>
+        <li><a href="cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="publications/index.html" data-i18n="nav.news">Latest News</a></li>
+        <li><a href="contact/index.html" data-i18n="nav.contact">Contact</a></li>
       </ul>
     </nav>
+    <div class="lang-toggle">
+      <button class="lang-btn active" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+    </div>
     <button id="menu-toggle" aria-label="Toggle menu">
       <span></span><span></span><span></span>
     </button>
@@ -83,9 +87,9 @@
       <div class="hero-brand">
         <span class="hero-brand-name">SimDyns</span>
         <span class="hero-brand-divider"></span>
-        <span class="hero-brand-sub">Technology Solutions</span>
+        <span class="hero-brand-sub" data-i18n="home.brand.sub">Technology Solutions</span>
       </div>
-      <h1 class="hero-tagline">Turning Complex Industrial Challenges<br>Into <span class="hero-tagline-accent">Measurable Results.</span></h1>
+      <h1 class="hero-tagline" data-i18n-html="home.hero.tagline">Turning Complex Industrial Challenges<br>Into <span class="hero-tagline-accent">Measurable Results.</span></h1>
     </div>
     <div class="hero-services">
       <!-- Card 1: Engineering Solutions -->
@@ -94,12 +98,12 @@
           <div class="hero-service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
           </div>
-          <h3>Engineering Solutions</h3>
+          <h3 data-i18n="home.card1.title">Engineering Solutions</h3>
         </div>
-        <p>End-to-end product design, simulation, and systems engineering — from concept to certified fabrication.</p>
+        <p data-i18n="home.card1.desc">End-to-end product design, simulation, and systems engineering — from concept to certified fabrication.</p>
         <div class="hero-service-btns">
-          <a href="services/index.html" class="hero-service-btn">Explore Services</a>
-          <a href="about/index.html" class="hero-service-btn hero-service-btn-ghost">Our Approach</a>
+          <a href="services/index.html" class="hero-service-btn" data-i18n="home.card1.btn1">Explore Services</a>
+          <a href="about/index.html" class="hero-service-btn hero-service-btn-ghost" data-i18n="home.card1.btn2">Our Approach</a>
         </div>
       </div>
       <!-- Card 2: Energy Management -->
@@ -108,12 +112,12 @@
           <div class="hero-service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
           </div>
-          <h3>Energy Management</h3>
+          <h3 data-i18n="home.card2.title">Energy Management</h3>
         </div>
-        <p>Cut costs by up to 35% — we manage, monitor &amp; deliver.<br>Expert guidance on ISO 50001 &amp; CBAM compliance.</p>
+        <p data-i18n-html="home.card2.desc">Cut costs by up to 35% — we manage, monitor &amp; deliver.<br>Expert guidance on ISO 50001 &amp; CBAM compliance.</p>
         <div class="hero-service-btns">
-          <a href="services/index.html#ems" class="hero-service-btn">Our Approach</a>
-          <a href="https://simdyns-enmg.vercel.app/" target="_blank" rel="noopener" class="hero-service-btn hero-service-btn-ghost">Live Platform →</a>
+          <a href="services/index.html#ems" class="hero-service-btn" data-i18n="home.card2.btn1">Our Approach</a>
+          <a href="https://simdyns-enmg.vercel.app/" target="_blank" rel="noopener" class="hero-service-btn hero-service-btn-ghost" data-i18n="home.card2.btn2">Live Platform →</a>
         </div>
       </div>
       <!-- Card 3: Deep Tech Training -->
@@ -122,12 +126,12 @@
           <div class="hero-service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h3>Deep Tech Training</h3>
+          <h3 data-i18n="home.card3.title">Deep Tech Training</h3>
         </div>
-        <p>Hands-on programmes in AI, simulation, cybersecurity, and space technology — built around your team.</p>
+        <p data-i18n="home.card3.desc">Hands-on programmes in AI, simulation, cybersecurity, and space technology — built around your team.</p>
         <div class="hero-service-btns">
-          <a href="services/index.html#dtc" class="hero-service-btn">View Courses</a>
-          <a href="contact/index.html" class="hero-service-btn hero-service-btn-ghost">Get in Touch</a>
+          <a href="services/index.html#dtc" class="hero-service-btn" data-i18n="home.card3.btn1">View Courses</a>
+          <a href="contact/index.html" class="hero-service-btn hero-service-btn-ghost" data-i18n="home.card3.btn2">Get in Touch</a>
         </div>
       </div>
     </div>
@@ -140,17 +144,17 @@
   <div class="container">
     <div class="why-grid">
       <div>
-        <h2 class="section-title">Why SimDyns</h2>
-        <p style="margin-bottom:24px;">SimDyns is an Engineering Bureau that turns complex technical challenges into competitive advantages. We deliver energy management systems, advanced simulation, and deep tech training that produce measurable results — from reduced energy costs and ISO compliance to faster product development cycles. Our team brings proven expertise across Aerospace, Automotive, Home Appliances, Industrial Machinery, Steel Construction, and Production.</p>
-        <a href="about/index.html" class="btn btn-teal">Our Solutions</a>
+        <h2 class="section-title" data-i18n="home.why.title">Why SimDyns</h2>
+        <p style="margin-bottom:24px;" data-i18n="home.why.text">SimDyns is an Engineering Bureau that turns complex technical challenges into competitive advantages. We deliver energy management systems, advanced simulation, and deep tech training that produce measurable results — from reduced energy costs and ISO compliance to faster product development cycles. Our team brings proven expertise across Aerospace, Automotive, Home Appliances, Industrial Machinery, Steel Construction, and Production.</p>
+        <a href="about/index.html" class="btn btn-teal" data-i18n="home.why.btn">Our Solutions</a>
       </div>
       <div class="core-competences">
-        <h2 class="section-title">Core Competences</h2>
+        <h2 class="section-title" data-i18n="home.core.title">Core Competences</h2>
         <ul>
-          <li><a href="services/index.html#cad">Computer Aided Design</a></li>
-          <li><a href="services/index.html#ems">Energy Management Solutions</a></li>
-          <li><a href="services/index.html#ipm">Innovation Management</a></li>
-          <li><a href="services/index.html#dtc">Deep Tech Courses & Training</a></li>
+          <li><a href="services/index.html#cad" data-i18n="home.core.cad">Computer Aided Design</a></li>
+          <li><a href="services/index.html#ems" data-i18n="home.core.ems">Energy Management Solutions</a></li>
+          <li><a href="services/index.html#ipm" data-i18n="home.core.ipm">Innovation Management</a></li>
+          <li><a href="services/index.html#dtc" data-i18n-html="home.core.dtc">Deep Tech Courses &amp; Training</a></li>
         </ul>
       </div>
     </div>
@@ -160,40 +164,40 @@
 <!-- SOLUTIONS -->
 <section style="background: var(--light-gray);">
   <div class="container">
-    <h2 class="section-title" style="text-align:center;">What We Deliver</h2>
-    <p class="section-sub" style="text-align:center; margin:0 auto 40px;">End-to-end engineering expertise across disciplines</p>
+    <h2 class="section-title" style="text-align:center;" data-i18n="home.solutions.title">What We Deliver</h2>
+    <p class="section-sub" style="text-align:center; margin:0 auto 40px;" data-i18n="home.solutions.sub">End-to-end engineering expertise across disciplines</p>
     <div class="solutions-grid">
       <div class="solution-card">
         <div class="solution-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
         </div>
-        <h3>Product Design and Development</h3>
-        <p>Reduce time-to-market and eliminate costly redesigns through end-to-end lifecycle management — from concept to certified fabrication drawings.</p>
-        <a href="contact/index.html" class="btn btn-teal" style="font-size:13px;padding:8px 18px;">Contact Us</a>
+        <h3 data-i18n="home.sol1.title">Product Design and Development</h3>
+        <p data-i18n="home.sol1.text">Reduce time-to-market and eliminate costly redesigns through end-to-end lifecycle management — from concept to certified fabrication drawings.</p>
+        <a href="contact/index.html" class="btn btn-teal" style="font-size:13px;padding:8px 18px;" data-i18n="btn.contact">Contact Us</a>
       </div>
       <div class="solution-card">
         <div class="solution-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
         </div>
-        <h3>Computer Aided Engineering</h3>
-        <p>Validate designs before production using CAD, FEA (Finite Element Analysis), and CFD (Computational Fluid Dynamics) — reducing risk and engineering rework.</p>
-        <a href="contact/index.html" class="btn btn-teal" style="font-size:13px;padding:8px 18px;">Contact Us</a>
+        <h3 data-i18n="home.sol2.title">Computer Aided Engineering</h3>
+        <p data-i18n="home.sol2.text">Validate designs before production using CAD, FEA (Finite Element Analysis), and CFD (Computational Fluid Dynamics) — reducing risk and engineering rework.</p>
+        <a href="contact/index.html" class="btn btn-teal" style="font-size:13px;padding:8px 18px;" data-i18n="btn.contact">Contact Us</a>
       </div>
       <div class="solution-card">
         <div class="solution-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
         </div>
-        <h3>Energy Management Solutions</h3>
-        <p>Optimise energy consumption and reduce operational costs with advanced monitoring platforms, performance indicators, CBAM evaluation &amp; mentoring, and data-driven management systems.</p>
-        <a href="services/index.html#ems" class="btn btn-teal" style="font-size:13px;padding:8px 18px;">Learn More</a>
+        <h3 data-i18n="home.sol3.title">Energy Management Solutions</h3>
+        <p data-i18n-html="home.sol3.text">Optimise energy consumption and reduce operational costs with advanced monitoring platforms, performance indicators, CBAM evaluation &amp; mentoring, and data-driven management systems.</p>
+        <a href="services/index.html#ems" class="btn btn-teal" style="font-size:13px;padding:8px 18px;" data-i18n="btn.learn">Learn More</a>
       </div>
       <div class="solution-card">
         <div class="solution-icon">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="6"/><path d="M12 6a6 6 0 1 0 6 6"/><line x1="12" y1="18" x2="12" y2="22"/><path d="m15 9 3-3"/><circle cx="18" cy="18" r="3"/></svg>
         </div>
-        <h3>Innovation &amp; Project Management</h3>
-        <p>Maximise return on investment with structured technology roadmaps, portfolio prioritisation, and strategic frameworks that turn ideas into deliverables.</p>
-        <a href="services/index.html" class="btn btn-teal" style="font-size:13px;padding:8px 18px;">Learn More</a>
+        <h3 data-i18n-html="home.sol4.title">Innovation &amp; Project Management</h3>
+        <p data-i18n="home.sol4.text">Maximise return on investment with structured technology roadmaps, portfolio prioritisation, and strategic frameworks that turn ideas into deliverables.</p>
+        <a href="services/index.html" class="btn btn-teal" style="font-size:13px;padding:8px 18px;" data-i18n="btn.learn">Learn More</a>
       </div>
     </div>
   </div>
@@ -202,14 +206,14 @@
 <!-- LATEST NEWS -->
 <section>
   <div class="container">
-    <h2 class="section-title">Latest News</h2>
-    <h4 style="color:var(--text-light); font-weight:500; margin-bottom:32px;">Stay Updated with SimDyns: Your Source for the Latest Innovations and Developments</h4>
+    <h2 class="section-title" data-i18n="home.news.title">Latest News</h2>
+    <h4 style="color:var(--text-light); font-weight:500; margin-bottom:32px;" data-i18n="home.news.sub">Stay Updated with SimDyns: Your Source for the Latest Innovations and Developments</h4>
     <div class="news-grid">
       <div class="news-card">
         <div class="news-thumb"><img src="assets/images/service-control.jpg" alt="Energy Management Platform" loading="lazy"></div>
         <div class="news-body">
-          <span class="tag">Energy Management</span>
-          <h3><a href="news/energy-platform-launch/index.html">SimDyns Launches Updated Energy Management Platform with Enhanced Monitoring and Analytics</a></h3>
+          <span class="tag" data-i18n="pubs.p1.tag">Energy Management</span>
+          <h3><a href="news/energy-platform-launch/index.html" data-i18n="pubs.p1.title">SimDyns Launches Updated Energy Management Platform with Enhanced Monitoring and Analytics</a></h3>
         </div>
       </div>
       <div class="news-card">
@@ -217,34 +221,34 @@
           <div class="news-thumb"><img src="assets/images/horizon-europe.jpg" alt="Horizon Europe – European Commission" loading="lazy"></div>
         </a>
         <div class="news-body">
-          <span class="tag">Horizon Europe</span>
-          <h3><a href="news/horizon-europe-2026/index.html">SimDyns Joins Horizon Europe 2026 Consortium to Expand Cross-Border Investment Ecosystems</a></h3>
+          <span class="tag" data-i18n="pubs.p2.tag">Horizon Europe</span>
+          <h3><a href="news/horizon-europe-2026/index.html" data-i18n="pubs.p2.title">SimDyns Joins Horizon Europe 2026 Consortium to Expand Cross-Border Investment Ecosystems</a></h3>
         </div>
       </div>
       <div class="news-card">
         <div class="news-thumb"><img src="assets/images/seebridge.png" alt="SeeBridge – EU Grant for Energy Management Solutions" loading="lazy"></div>
         <div class="news-body">
-          <span class="tag">Energy</span>
-          <h3><a href="news/eu-grant/index.html">SimDyns Technology Solutions Awarded EU Grant to Develop Energy Management Solutions for Industrial Applications</a></h3>
+          <span class="tag" data-i18n="pubs.p4.tag">Energy Management</span>
+          <h3><a href="news/eu-grant/index.html" data-i18n="pubs.p4.title">SimDyns Technology Solutions Awarded EU Grant to Develop Energy Management Solutions for Industrial Applications</a></h3>
         </div>
       </div>
       <div class="news-card">
         <div class="news-thumb"><img src="assets/images/eit-deep-tech-talent.jpg" alt="EIT Tech Talent – Funded by the European Union" loading="lazy"></div>
         <div class="news-body">
-          <span class="tag">Cybersecurity</span>
-          <h3><a href="news/cybersecurity-training/index.html">SimDyns Launches AI-Powered Cybersecurity Training Program Aligned with EIT Deep Tech Goals</a></h3>
+          <span class="tag" data-i18n="pubs.p5.tag">Cybersecurity &amp; AI</span>
+          <h3><a href="news/cybersecurity-training/index.html" data-i18n="pubs.p5.title">SimDyns Launches AI-Powered Cybersecurity Training Program Aligned with EIT Deep Tech Goals</a></h3>
         </div>
       </div>
       <div class="news-card">
         <div class="news-thumb"><img src="assets/images/cubesat-training.png" alt="CubeSat and Computer Vision Training Programs" loading="lazy"></div>
         <div class="news-body">
-          <span class="tag">Training</span>
-          <h3><a href="news/cubesat-training/index.html">SimDyns Launches CubeSat and Computer Vision Training Program in Partnership with Creativa Egypt</a></h3>
+          <span class="tag" data-i18n="pubs.p3.tag">Training &amp; Space Tech</span>
+          <h3><a href="news/cubesat-training/index.html" data-i18n="pubs.p3.title">SimDyns Launches CubeSat and Computer Vision Training Program in Partnership with Creativa Egypt</a></h3>
         </div>
       </div>
     </div>
     <div style="text-align:center; margin-top:36px;">
-      <a href="publications/index.html" class="btn btn-primary">Read SimDyns Latest News</a>
+      <a href="publications/index.html" class="btn btn-primary" data-i18n="btn.all.news">Read SimDyns Latest News</a>
     </div>
   </div>
 </section>
@@ -252,51 +256,51 @@
 <!-- CASE STUDIES PREVIEW -->
 <section style="background: var(--light-gray);">
   <div class="container">
-    <h2 class="section-title">Cases</h2>
-    <h4 style="color:var(--text-light); font-weight:500; margin-bottom:32px;">Engineering solutions delivered across industry sectors worldwide.</h4>
+    <h2 class="section-title" data-i18n="home.cases.title">Cases</h2>
+    <h4 style="color:var(--text-light); font-weight:500; margin-bottom:32px;" data-i18n="home.cases.sub">Engineering solutions delivered across industry sectors worldwide.</h4>
     <div class="cases-preview-grid">
       <div class="case-preview-card">
         <div class="case-preview-img" style="background-image:url('assets/images/news-eu-grant.png')"></div>
         <div class="case-preview-body">
           <span class="tag">Energy Management</span>
-          <h3>Energy Management Solution Development</h3>
-          <p>ISO 50001-aligned energy management system for plant and utility-scale operations — delivered under EU SeeBridge grant in partnership with IMMIB.</p>
+          <h3 data-i18n="home.casepreview1.title">Energy Management Solution Development</h3>
+          <p data-i18n="home.casepreview1.text">ISO 50001-aligned energy management system for plant and utility-scale operations — delivered under EU SeeBridge grant in partnership with IMMIB.</p>
         </div>
       </div>
       <div class="case-preview-card">
         <div class="case-preview-img" style="background-image:url('assets/images/service-production.jpg')"></div>
         <div class="case-preview-body">
           <span class="tag">Systems Integration</span>
-          <h3>Production Cell Automation (Gantry System)</h3>
-          <p>Fully automated loading and unloading system for crystal processing machines at Asfour Crystal International — spanning five sub-projects over two decades.</p>
+          <h3 data-i18n="home.casepreview2.title">Production Cell Automation (Gantry System)</h3>
+          <p data-i18n="home.casepreview2.text">Fully automated loading and unloading system for crystal processing machines at Asfour Crystal International — spanning five sub-projects over two decades.</p>
         </div>
       </div>
       <div class="case-preview-card">
         <div class="case-preview-img" style="background-image:url('assets/images/hero-bg1.jpg')"></div>
         <div class="case-preview-body">
           <span class="tag">Product Development</span>
-          <h3>Drone-Systems Aeronautical Engineering</h3>
-          <p>Mechanical concept development, stress analysis, and design verification for commercial drone systems targeting the mining and underground industrial sector — Inkonova AB, Sweden.</p>
+          <h3 data-i18n="home.casepreview3.title">Drone-Systems Aeronautical Engineering</h3>
+          <p data-i18n="home.casepreview3.text">Mechanical concept development, stress analysis, and design verification for commercial drone systems targeting the mining and underground industrial sector — Inkonova AB, Sweden.</p>
         </div>
       </div>
     </div>
     <div style="text-align:center; margin-top:36px;">
-      <a href="cases/index.html" class="btn btn-primary">View All Cases</a>
+      <a href="cases/index.html" class="btn btn-primary" data-i18n="btn.all.cases">View All Cases</a>
     </div>
   </div>
 </section>
 
 <!-- QUOTE -->
 <div class="quote-section">
-  <blockquote>To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science.</blockquote>
+  <blockquote data-i18n="home.quote">To raise new questions, new possibilities, to regard old problems from a new angle, requires creative imagination and marks real advance in science.</blockquote>
   <p class="quote-author">Albert Einstein</p>
 </div>
 
 <!-- PARTNERS -->
 <section class="partners-section">
   <div class="container">
-    <h2 class="section-title" style="text-align:center;">Trusted Partners</h2>
-    <p class="section-sub" style="text-align:center; margin:0 auto 8px;">We take great pride in our partnership and continuous cooperation with some of the world's biggest engineering and manufacturing companies.</p>
+    <h2 class="section-title" style="text-align:center;" data-i18n="home.partners.title">Trusted Partners</h2>
+    <p class="section-sub" style="text-align:center; margin:0 auto 8px;" data-i18n="home.partners.sub">We take great pride in our partnership and continuous cooperation with some of the world's biggest engineering and manufacturing companies.</p>
     <div class="partners-logos">
       <div class="partner-logo"><img src="assets/images/partner-eit.jpg" alt="EIT Deep Tech" style="transform:scale(1.5); object-fit:cover;" loading="lazy"></div>
       <div class="partner-logo"><img src="assets/images/partner-seebridge.jpg" alt="SeeBridge" loading="lazy"></div>
@@ -311,9 +315,9 @@
 
 <!-- CTA -->
 <div class="cta-section">
-  <h2>Simulation is the Path to the Future</h2>
-  <p>We are a handpicked team of highly qualified engineers committed to multi-disciplinary excellence</p>
-  <a href="contact/index.html" class="btn btn-outline">Contact Us</a>
+  <h2 data-i18n="home.cta.title">Simulation is the Path to the Future</h2>
+  <p data-i18n="home.cta.text">We are a handpicked team of highly qualified engineers committed to multi-disciplinary excellence</p>
+  <a href="contact/index.html" class="btn btn-outline" data-i18n="btn.contact">Contact Us</a>
 </div>
 
 <!-- FOOTER -->
@@ -323,29 +327,30 @@
       <a href="index.html" class="logo">
         <img src="assets/images/logo.png" alt="SimDyns Logo" class="logo-img">
       </a>
-      <p>SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
+      <p data-i18n="footer.tagline">SimDyns is an Engineering Bureau dedicated to advancing energy management solutions and deeptech training development.</p>
       <p style="margin-top:10px; font-size:13px; opacity:.6;"><strong>CVR/VAT No. 44773481</strong></p>
     </div>
     <div class="footer-col">
-      <h4>Company</h4>
+      <h4 data-i18n="footer.company">Company</h4>
       <ul>
-        <li><a href="about/index.html">About Us</a></li>
-        <li><a href="services/index.html">Our Services</a></li>
-        <li><a href="publications/index.html">Latest News</a></li>
-        <li><a href="contact/index.html">Contact</a></li>
+        <li><a href="about/index.html" data-i18n="footer.about">About Us</a></li>
+        <li><a href="services/index.html" data-i18n="footer.services">Our Services</a></li>
+        <li><a href="cases/index.html" data-i18n="nav.cases">Cases</a></li>
+        <li><a href="publications/index.html" data-i18n="footer.news">Latest News</a></li>
+        <li><a href="contact/index.html" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4 data-i18n="footer.services.col">Services</h4>
       <ul>
-        <li><a href="services/index.html#cad">Computer Aided Design</a></li>
-        <li><a href="services/index.html#ems">Energy Management</a></li>
-        <li><a href="services/index.html#dtc">Deep Tech Training</a></li>
-        <li><a href="services/index.html#ipm">Innovation &amp; Project Management</a></li>
+        <li><a href="services/index.html#cad" data-i18n="footer.cad">Computer Aided Design</a></li>
+        <li><a href="services/index.html#ems" data-i18n="footer.ems">Energy Management</a></li>
+        <li><a href="services/index.html#dtc" data-i18n="footer.dtc">Deep Tech Training</a></li>
+        <li><a href="services/index.html#ipm" data-i18n="footer.ipm">Innovation &amp; Project Management</a></li>
       </ul>
     </div>
     <div class="footer-col">
-      <h4>Connect</h4>
+      <h4 data-i18n="footer.connect">Connect</h4>
       <ul>
         <li><a href="mailto:info@simdyns.com">info@simdyns.com</a></li>
         <li><a href="tel:+4578886166">+45 78 88 61 66</a></li>
@@ -355,7 +360,7 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
+    <span data-i18n="footer.copyright">© 2025 All Rights Reserved | SimDyns Technology Solutions</span>
     <div class="social-links">
       <a href="https://www.facebook.com/people/SimDyns-Technology-Solutions/61568349276701/#" target="_blank" title="Facebook">f</a>
       <a href="https://www.linkedin.com/company/simdyns/" target="_blank" title="LinkedIn">in</a>
@@ -364,5 +369,6 @@
 </footer>
 
 <script src="assets/js/nav.js"></script>
+<script src="assets/js/i18n.js"></script>
 </body>
 </html>
