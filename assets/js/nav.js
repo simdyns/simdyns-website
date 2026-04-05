@@ -1,10 +1,18 @@
 // Highlight active nav link
 document.addEventListener('DOMContentLoaded', () => {
-  const currentHref = window.location.href;
+  // Normalise a pathname: strip trailing slash, strip index.html, lowercase
+  function normPath(p) {
+    return p.replace(/\/index\.html$/, '/').replace(/\/$/, '').toLowerCase() || '/';
+  }
+
+  const currentPath = normPath(window.location.pathname);
+
   document.querySelectorAll('nav a').forEach(a => {
     a.classList.remove('active');
-    const linkHref = new URL(a.getAttribute('href'), currentHref).href;
-    if (linkHref === currentHref) a.classList.add('active');
+    try {
+      const linkPath = normPath(new URL(a.getAttribute('href'), window.location.href).pathname);
+      if (linkPath === currentPath) a.classList.add('active');
+    } catch(e) {}
   });
 
   // Mobile menu toggle
