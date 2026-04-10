@@ -3,6 +3,7 @@
   var T = {
     en: {
       /* ── NAV ── */
+      'nav.language': 'Language',
       'nav.home': 'Home',
       'nav.about': 'About',
       'nav.services': 'Services',
@@ -285,6 +286,7 @@
 
     de: {
       /* ── NAV ── */
+      'nav.language': 'Sprache',
       'nav.home': 'Startseite',
       'nav.about': 'Über uns',
       'nav.services': 'Leistungen',
@@ -567,6 +569,7 @@
 
     da: {
       /* ── NAV ── */
+      'nav.language': 'Sprog',
       'nav.home': 'Forside',
       'nav.about': 'Om os',
       'nav.services': 'Ydelser',
@@ -870,18 +873,48 @@
       if (T[lang][key] !== undefined) el.placeholder = T[lang][key];
     });
 
-    // Update active state on toggle buttons
-    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    // Update active state on language options
+    document.querySelectorAll('.lang-option').forEach(function(btn) {
       btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+    });
+
+    // Close dropdown after selection
+    document.querySelectorAll('.lang-dropdown-menu').forEach(function(menu) {
+      menu.classList.remove('open');
+    });
+    document.querySelectorAll('.lang-dropdown-btn').forEach(function(btn) {
+      btn.setAttribute('aria-expanded', 'false');
     });
 
     try { localStorage.setItem('simdyns-lang', lang); } catch(e) {}
   }
 
   document.addEventListener('DOMContentLoaded', function() {
-    // Wire up buttons
-    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+    // Wire up language options
+    document.querySelectorAll('.lang-option').forEach(function(btn) {
       btn.addEventListener('click', function() { applyLang(btn.getAttribute('data-lang')); });
+    });
+
+    // Dropdown toggle
+    document.querySelectorAll('.lang-dropdown-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var menu = btn.nextElementSibling;
+        var isOpen = menu.classList.contains('open');
+        // Close all dropdowns first
+        document.querySelectorAll('.lang-dropdown-menu').forEach(function(m) { m.classList.remove('open'); });
+        document.querySelectorAll('.lang-dropdown-btn').forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
+        if (!isOpen) {
+          menu.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Close dropdown on outside click
+    document.addEventListener('click', function() {
+      document.querySelectorAll('.lang-dropdown-menu').forEach(function(m) { m.classList.remove('open'); });
+      document.querySelectorAll('.lang-dropdown-btn').forEach(function(b) { b.setAttribute('aria-expanded', 'false'); });
     });
 
     // Restore saved language
